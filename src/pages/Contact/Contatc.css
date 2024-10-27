@@ -1,0 +1,168 @@
+.contact{
+    height: 42vw;            
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%; 
+    justify-content: space-between;
+    align-items: center;
+    .text{
+        width: 42%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-content: center;
+        h1{
+            font-size: 3.6vw;
+            font-weight: 500;
+            margin: 0;
+
+        }
+        .desc,h2{
+            font-size: 1.2vw;
+            width: 80%;
+            font-weight: 100;
+            color: rgb(50, 50, 49);
+            letter-spacing: .1vw;
+            line-height: 1.9vw;
+
+            
+        }
+        .desc{
+            margin: 3vw 0;
+            
+            
+        }
+        .mc{
+            margin: 2vw 0;
+        }
+        .logos{
+            display: flex;
+            width: 10vw;
+            justify-content: left;
+            gap:2vw;
+            .item1,.item2{
+                background-position: center;
+                background-size: cover;
+                height: 2.5vw;
+                width: 2.5vw;
+            }
+            .item1{
+                background-image: url("../../assets/contact/logos/Group\ 17.png");
+            }
+        }
+    }
+    .main_image{
+        width: 55%;
+        height: 100%;
+        background-image: url("../../assets/contact/macarons-2548827.jpg");
+        background-size: cover;
+        border-radius: 0 10vw 0 0;
+    }
+                     
+}  
+
+@media (max-width: 768px){
+    .contact{
+    height: 55vw; 
+    margin-top: 10vw; 
+    .text{
+        width: 48%;
+        height: 100%;
+        h1{font-size:4.5vw ;}
+        .desc,h2{
+            font-size: 1.8vw;
+            width: 80%;
+            font-weight: 100;
+            letter-spacing: .3vw;
+            line-height: 2vw;
+
+            
+        }
+        .desc{
+            margin: 4vw 0;
+        }
+        .mc{
+            margin: 3vw 0;
+        }
+        .logos{
+            display: flex;
+            width: 10vw;
+            justify-content: left;
+            gap:2vw;
+            .item1,.item2{
+                background-position: center;
+                background-size: cover;
+                height: 3vw;
+                width: 3vw;
+            }
+        }
+    }
+    .main_image{
+        width: 50%;
+        height: 100%;
+    }
+
+            
+
+    }
+    
+}@media (max-width: 425px){
+    .contact{
+    height: 190vw;
+    margin-top: 30vw;
+    display: flex;
+    flex-direction: column-reverse; 
+    justify-content: center;
+    .text{
+        width: 85%;
+        height: 60%;
+        h1{font-size:6vw ;}
+        .desc,h2{
+            font-size: 3vw;
+            width: 100%;
+            font-weight: 100;
+            letter-spacing: .3vw;
+                line-height: 5vw;
+
+            
+        }
+        .desc{
+            margin: 4vw 0;
+        }
+        .mc{
+            margin: 3vw 0;
+        }
+        .logos{
+            display: flex;
+            width: 30vw;
+            justify-content: left;
+            gap:2vw;
+            .item1,.item2{
+                background-position: center;
+                background-size: cover;
+                height: 5vw;
+                width: 5vw;
+            }
+            .item2{
+                width: 20vw;
+                display: flex;
+                align-items: center;
+                font-size: 3vw;
+            }
+        }
+    }
+    .main_image{
+        width: 100%;
+        height: 40%;
+        background-image: url("../../assets/contact/con2.png");
+        background-position: center;
+        border-radius: 0;
+    }
+
+            
+
+    }
+    
+}
+

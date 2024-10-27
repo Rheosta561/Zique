@@ -1,0 +1,152 @@
+.story {
+    position: relative;  
+    /* background-image: url("../../../assets/About/spring-roll-6760871.jpg"); */
+    background-size: cover;    
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 45vw;            
+    display: flex;
+    justify-content: left; 
+    padding-left: 10vw;  
+    align-items: center;  
+    animation: scrollBackground 10s linear ;
+    animation-timeline: view();    
+}
+
+.text-box {
+    position: absolute;       
+    background-color: rgba(0, 0, 0, 0.793); 
+    color: white;             
+    padding: 2vw;
+    border-radius: 1vw;          
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: first baseline;
+    width: 35%;
+        h1{
+            font-size: 1.5vw;
+            font-weight: 400;
+            letter-spacing: .5vw;
+
+        }
+        h2{
+            width: 70%;
+            font-size: 2vw;
+            font-weight: 600;
+            letter-spacing: .2vw;
+
+        }
+        p{
+
+            font-size: 1.2vw;
+            font-weight: 400;
+            letter-spacing: .1vw;
+            line-height: 1.5vw;
+            .highlight { 
+                font-style: italic;
+                font-weight:bolder;                  
+            }
+            
+        }
+                        
+}
+
+@media (max-width: 768px) {
+    .story {
+        position: relative;  
+        /* background-image: url("../../../assets/About/spring-roll-6760871.jpg"); */
+        background-size: cover;    
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 65vw;            
+        display: flex;
+        justify-content: left; 
+        padding-left: 5vw;  
+        align-items: center;      
+    }
+    
+    .text-box {
+        position: absolute;       
+        background-color: rgba(0, 0, 0, 0.793); 
+        color: white;             
+        padding: 2vw;
+        border-radius: 2vw;          
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: first baseline;
+        width: 45%;
+            h1{
+                font-size: 2.3vw;
+                font-weight: 400;
+            }
+            h2{
+                width: 90%;
+                font-size: 3.6vw;
+                font-weight: 600;
+            }
+            p{
+    
+                font-size: 1.8vw;
+                font-weight: 400;
+                letter-spacing: .3vw;
+                line-height: 2vw;
+                .highlight { 
+                    font-style: italic;
+                    font-weight:bolder;                  
+                }
+                
+            }
+                            
+    }
+}
+@media (max-width: 425px) {
+    .story {
+        position: relative;  
+        background-image: url("../../../assets/About/jdsf3.png");
+        background-size: cover;    
+        background-position: 70% 60%;
+        background-repeat: no-repeat;
+        height: 140vw;            
+  
+        .text-box {
+            position: absolute;       
+            background-color: rgba(169, 41, 41, 0); 
+            color: white;             
+            padding: 5vw;
+            border-radius: 5vw;          
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: first baseline;
+            width: 80%;
+                h1{
+                    font-size: 3.5vw;
+                    font-weight: 400;
+                    
+                }
+                h2{
+                    width: 90%;
+                    font-size: 5vw;
+                    font-weight: 600;
+                }
+                p{
+                    width: 60%;
+                    font-size: 3vw;
+                    font-weight: 400;
+                    letter-spacing: .3vw;
+                line-height: 5vw;
+                    .highlight { 
+                        font-style: italic;
+                        font-weight:bolder;                  
+                    }
+                    
+                }
+                                
+        }   
+    }
+    
+    
+}
+

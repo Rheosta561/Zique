@@ -1,0 +1,144 @@
+.botpage{
+    display: flex;
+    width: 80%;
+    margin: 7vw auto;
+    height: 40vw;
+    justify-content: space-evenly;
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: first baseline;
+        width: 45%;
+        h1{
+            font-size: 1.5vw;
+            font-weight: 400;
+            letter-spacing: .5vw;
+
+        }
+        h2{
+            width: 70%;
+            font-size: 2vw;
+            font-weight: 600;
+            letter-spacing: .4vw;
+
+        }
+        p{
+            font-size: 1.2vw;
+            font-weight: 400;
+            letter-spacing: .1vw;
+            line-height: 1.8vw;
+            margin-bottom: 3vw;
+
+
+
+        }
+    }
+    .image{
+        width: 45%;
+        display: flex;
+        .img_container{
+            background-image: url("../../../assets/home/ava2.png");
+            background-size: cover;
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            margin-bottom: 0;
+            background-position: center;
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .botpage{
+        display: flex;
+        width: 90%;
+        margin: 10vw auto;
+        height: 58vw;
+        justify-content: space-between;
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: first baseline;
+            width: 55%;
+            h1{
+                font-size: 2.3vw;
+                font-weight: 400;
+                margin-bottom:0;
+            }
+            h2{
+                width: 70%;
+                font-size: 3.6vw;
+                font-weight: 600;
+            }
+            p{
+                font-size: 1.8vw;
+                font-weight: 400;
+                margin-bottom:5vw ;
+                letter-spacing: .3vw;
+                line-height: 2vw;
+            }
+        }
+        .image{
+            width: 40%;
+            display: flex;
+            .img_container{
+                background-size: cover;
+                border-radius: 2vw;
+                background-position: center;
+                width: 100%;
+                height: 80%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .botpage{
+        display: flex;
+        width: 95%;
+        flex-direction: column;
+        margin-bottom: 0 ;
+        height: 130vw;
+        justify-content: space-around;
+        align-items:center;
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: first baseline;
+            width: 85%;
+            h1{
+                font-size: 3.5vw;
+                font-weight: 400;
+                margin-bottom:0;
+            }
+            h2{
+                width: 70%;
+                font-size: 5vw;
+                font-weight: 600;
+            }
+            p{
+                font-size: 3vw;
+                font-weight: 400;
+                letter-spacing: .3vw;
+                line-height: 5vw;
+            }
+        }
+        .image{
+            width: 85%;
+            display: flex;
+            height: 40vw;
+            .img_container{
+                background-size: 100%;
+                background-position: center;
+                width: 100%;
+                height: 100%;
+                margin: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.work{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40vw;
+    margin: 8vw 0;
+    justify-content: space-between;
+    .img{
+        width: 45%;
+        /* background-color: aqua; */
+        background-image: url('../../../assets/About/sweets-6851675-ai-brush-removebg-dqw94csa.png');
+        background-size: cover;    /* Cover the entire section */
+        background-position: 50% 80%;
+        background-repeat: no-repeat;  
+    }
+    
+    .text{
+        width: 45%;
+        margin-left: 2vw;
+        h1{
+            font-size: 2.5vw;
+        }
+        .zm{
+            font-size: 2vw;
+        }
+        h2{
+            font-size: 1.5vw;
+            font-weight: 400;
+        }
+        h3{
+            width: 70%;
+            font-size: 1.2vw;
+            font-weight: 100;
+            color: rgb(50, 50, 49);
+            letter-spacing: .1vw;
+            line-height: 1.3vw;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .work{
+        display: flex;
+        width: 100%;
+        height: 70vw;
+        margin: 4vw 0;
+        justify-content: space-between;
+        .img{
+            width: 45%;
+        }
+        
+        .text{
+            width: 55%;
+            margin-left: 3vw;
+            h1{
+                font-size: 3.6vw;
+            }
+            .zm{
+                font-size: 2.8vw;
+            }
+            h2{
+                font-size: 2.3vw;
+                font-weight: 400;
+            }
+            h3{
+                width: 70%;
+                font-size: 1.8vw;
+                font-weight: 100;
+                color: rgb(50, 50, 49);
+                letter-spacing: .2vw;
+                line-height: 1.9vw;
+            }
+    
+        }
+    }
+}
+@media (max-width: 425px) {
+    .work{
+        width: 100%;
+        height: 150vw;
+        justify-content: center;
+        margin: 6vw 0 0 0;
+        .img{
+            display: none;
+        }
+        
+        .text{
+            width: 80%;
+            h1{
+                font-size: 5vw;
+            }
+            .zm{
+                font-size: 4vw;
+                margin-bottom: 10vw;
+            }
+            h2{
+                width: 90%;
+                background-color: black;
+                color: white;
+                height: 10vw;
+                display: flex;
+                padding-left: 2vw;
+                border-radius: 0 10vw 10vw 0;
+                align-items: center;
+                background-size: cover;
+                margin-top: 10vw;
+                font-size: 3.4vw;
+                font-weight: 400;
+            }
+            .item1{
+                background-image: url("../../../assets/About/bread.png");
+            }
+            .item2{
+                background-image: url("../../../assets/About/egg.png");
+            }
+            .item3{
+                background-image: url("../../../assets/About/shaadi.png");
+            }
+            h3{
+                width: 90%;
+                font-size: 3vw;
+                font-weight: 100;
+                color: rgb(0, 0, 0);
+                letter-spacing: .3vw;
+                line-height: 5vw;
+                
+            }
+    
+        }
+    }
+}
