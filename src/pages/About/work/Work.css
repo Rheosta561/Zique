@@ -8,7 +8,8 @@
     .img{
         width: 45%;
         /* background-color: aqua; */
-        background-image: url('../../../assets/About/sweets-6851675-ai-brush-removebg-dqw94csa.png');
+        background-image: url("../../../assets/About/colajump.png");
+        transform: scaleX(-1);
         background-size: cover;    /* Cover the entire section */
         background-position: 50% 80%;
         background-repeat: no-repeat;  
@@ -42,17 +43,20 @@
 @media (max-width: 768px) {
     .work{
         display: flex;
+        /* background-color: aquamarine; */
         width: 100%;
-        height: 70vw;
+        height: 90vw;
         margin: 4vw 0;
         justify-content: space-between;
         .img{
             width: 45%;
+            background-size: 120%;
+            background-position: 50% 80%;
         }
         
         .text{
-            width: 55%;
-            margin-left: 3vw;
+            /* background-color: aqua; */
+            width: 60%;
             h1{
                 font-size: 3.6vw;
             }
@@ -60,16 +64,35 @@
                 font-size: 2.8vw;
             }
             h2{
+                width: 70%;
+                background-color: black;
+                color: white;
+                height: 5vw;
+                display: flex;
+                padding-left: 1vw;
+                border-radius: 0 5vw 5vw 0;
+                align-items: center;
+                background-size: cover;
                 font-size: 2.3vw;
                 font-weight: 400;
+            }
+            .item1{
+                background-image: url("../../../assets/About/bread.png");
+            }
+            .item2{
+                background-image: url("../../../assets/About/egg.png");
+            }
+            .item3{
+                background-image: url("../../../assets/About/shaadi.png");
             }
             h3{
                 width: 70%;
                 font-size: 1.8vw;
                 font-weight: 100;
-                color: rgb(50, 50, 49);
-                letter-spacing: .2vw;
-                line-height: 1.9vw;
+                color: rgb(0, 0, 0);
+                letter-spacing: .1vw;
+                line-height: 3vw;
+                
             }
     
         }

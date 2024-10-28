@@ -38,7 +38,7 @@
         }
         .logos{
             display: flex;
-            width: 10vw;
+            width: 20vw;
             justify-content: left;
             gap:2vw;
             .item1,.item2{
@@ -50,32 +50,41 @@
             .item1{
                 background-image: url("../../assets/contact/logos/Group\ 17.png");
             }
+            .item2{
+                width: 15vw;
+                display: flex;
+                align-items: center;
+                font-size: 1.2vw;
+            }
+
         }
     }
     .main_image{
         width: 55%;
         height: 100%;
-        background-image: url("../../assets/contact/macarons-2548827.jpg");
+        background-image: url("../../assets/contact/con2.png");
         background-size: cover;
-        border-radius: 0 10vw 0 0;
     }
                      
 }  
 
 @media (max-width: 768px){
     .contact{
-    height: 55vw; 
+    height: 100vw; 
     margin-top: 10vw; 
+    display: flex;
+    flex-direction: column-reverse; 
+    justify-content: center;
     .text{
-        width: 48%;
-        height: 100%;
+        width: 85%;
+        height: 60%;
         h1{font-size:4.5vw ;}
         .desc,h2{
             font-size: 1.8vw;
             width: 80%;
             font-weight: 100;
-            letter-spacing: .3vw;
-            line-height: 2vw;
+            letter-spacing: .1vw;
+                line-height: 3vw;
 
             
         }
@@ -87,7 +96,7 @@
         }
         .logos{
             display: flex;
-            width: 10vw;
+            width: 20vw;
             justify-content: left;
             gap:2vw;
             .item1,.item2{
@@ -96,11 +105,20 @@
                 height: 3vw;
                 width: 3vw;
             }
+            .item2{
+                width: 15vw;
+                display: flex;
+                align-items: center;
+                font-size: 1.8vw;
+            }
         }
     }
     .main_image{
-        width: 50%;
-        height: 100%;
+        width: 100%;
+        height: 40%;
+        background-size: 40%;
+        background-position: center;
+        
     }
 
             
@@ -155,9 +173,10 @@
     .main_image{
         width: 100%;
         height: 40%;
-        background-image: url("../../assets/contact/con2.png");
         background-position: center;
-        border-radius: 0;
+        background-size: 100%;
+
+
     }
 
             

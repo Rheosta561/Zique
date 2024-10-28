@@ -1,6 +1,6 @@
 .story {
     position: relative;  
-    /* background-image: url("../../../assets/About/spring-roll-6760871.jpg"); */
+    background-image: url("../../../assets/About/jdsf3.png");
     background-size: cover;    
     background-position: center;
     background-repeat: no-repeat;
@@ -54,29 +54,25 @@
 
 @media (max-width: 768px) {
     .story {
-        position: relative;  
-        /* background-image: url("../../../assets/About/spring-roll-6760871.jpg"); */
         background-size: cover;    
-        background-position: center;
+        background-position: 50% 100%;
         background-repeat: no-repeat;
         height: 65vw;            
         display: flex;
         justify-content: left; 
-        padding-left: 5vw;  
         align-items: center;      
     }
     
     .text-box {
         position: absolute;       
-        background-color: rgba(0, 0, 0, 0.793); 
+        /* background-color:aqua;  */
         color: white;             
-        padding: 2vw;
         border-radius: 2vw;          
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: first baseline;
-        width: 45%;
+        width: 50%;
             h1{
                 font-size: 2.3vw;
                 font-weight: 400;
@@ -90,8 +86,8 @@
     
                 font-size: 1.8vw;
                 font-weight: 400;
-                letter-spacing: .3vw;
-                line-height: 2vw;
+                letter-spacing: .1vw;
+                line-height: 3vw;
                 .highlight { 
                     font-style: italic;
                     font-weight:bolder;                  
