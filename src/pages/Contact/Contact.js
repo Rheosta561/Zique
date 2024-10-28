@@ -21,10 +21,11 @@ const Contact = () => {
               <h2>Mail : meet@zique.co</h2>
               <h2>Call : +91 82091 84843</h2>
             </div>
-           <div className='logos'>
-            <a href = "https://www.instagram.com/ziquedine?igsh=MTMzdjVwejYyMno5dQ==" target='_blank'><div className='item1'></div></a>
+            <a href = "https://www.instagram.com/ziquedine?igsh=MTMzdjVwejYyMno5dQ==" target='_blank'><div className='logos'>
+            <div className='item1'></div>
             <div className='item2'> Check us out</div>
            </div>
+           </a>
         </div>
         <div className='main_image'></div>
     </div>

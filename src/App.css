@@ -9,8 +9,13 @@ body {
   html {
     scroll-behavior: smooth;
 }
-a{
-  text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none; 
+}
+
+a:visited {
+  color: inherit;
 }
 
   
