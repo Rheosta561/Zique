@@ -1,5 +1,5 @@
 .contact{
-    height: 42vw;            
+    height: 50vw;            
     display: flex;
     flex-direction: row-reverse;
     width: 100%; 
@@ -19,12 +19,11 @@
 
         }
         .desc,h2{
-            font-size: 1.2vw;
             width: 80%;
             font-weight: 100;
             color: rgb(50, 50, 49);
-            letter-spacing: .1vw;
-            line-height: 1.9vw;
+            font-size: 1.4vw;
+            line-height: 2vw;
 
             
         }

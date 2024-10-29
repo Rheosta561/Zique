@@ -2,15 +2,13 @@
     position: relative;  
     background-image: url("../../../assets/About/jdsf3.png");
     background-size: cover;    
-    background-position: center;
+    background-position: 50% 90%;
     background-repeat: no-repeat;
     height: 45vw;            
     display: flex;
     justify-content: left; 
     padding-left: 10vw;  
-    align-items: center;  
-    animation: scrollBackground 10s linear ;
-    animation-timeline: view();    
+    align-items: center;    
 }
 
 .text-box {
@@ -39,10 +37,8 @@
         }
         p{
 
-            font-size: 1.2vw;
-            font-weight: 400;
-            letter-spacing: .1vw;
-            line-height: 1.5vw;
+            font-size: 1.4vw;
+            line-height: 2vw;
             .highlight { 
                 font-style: italic;
                 font-weight:bolder;                  
