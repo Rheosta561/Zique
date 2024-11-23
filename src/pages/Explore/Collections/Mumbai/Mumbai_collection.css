@@ -1,0 +1,68 @@
+/* General Styles */
+.collection {
+    display: flex;
+    margin: auto;
+    height: 100vh;
+}
+
+.carasouel {
+    margin:  auto;
+    height: 40vw;
+    width: 82vw;
+}
+
+.headtext {
+    font-size: 1.9vw;
+    font-weight: 200;
+    letter-spacing: 0.2vw;
+    margin-bottom: 2vw;
+}
+
+.swiper {
+    padding: 6vw;
+    width: 75vw;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .collection {
+        height: 170vw;
+    }
+    .carasouel {
+        margin:  10vw auto;
+        width: 82vw;
+    }
+
+    .headtext {
+        font-size: 3vw;
+        font-weight: 200;
+        letter-spacing: 0.2vw;
+        margin: 6vw;
+    }
+
+    .flexbox-container {
+        display: flex;
+        gap: 3vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 425px) {
+    .headtext {
+        font-size: 4vw;
+        font-weight: 200;
+        letter-spacing: 0vw;
+        margin: 8vw 0vw;
+    }
+
+    .flexbox-container {
+        display: flex;
+        gap: 1vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

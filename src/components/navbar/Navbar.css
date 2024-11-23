@@ -1,5 +1,6 @@
 .navbar{
     position:fixed;
+    margin-top: 0;
     z-index: 1000;
     display: flex;
     width : 100%;
@@ -43,139 +44,165 @@
     }
     
 }
-@media (max-width: 768px){
-    .navbar{
-        position:fixed;
-        z-index: 1000;
-        display: flex;
-        width : 100%;
-        height: 6vw;
+/* Tablet View: max-width 768px */
+@media (max-width: 768px) {
+    .navbar {
+        height: 10vw;
         font-weight: 400;
-        justify-content: space-evenly;
-        padding: 0 ;
+        justify-content: right;
+        padding: 0;
+        gap: 30vw;
         font-size: 2vw;
-        font-weight: 400;
         background-color: rgb(255, 255, 255);
-        
+        position: fixed;
+
         a {
             text-decoration: none;
             color: black;
         }
-        
-        .left{
-            width: 30%;
-            justify-content: left;
-            display: flex;
-            align-items: center;
-        }
-        .mid{
-            background-image: url("../../assets/navbar/blacklogo.png");
-            width: 25%;
-            height: 6vw;
-            background-size: 70%;
-            background-position: center 50%;
-    
-    
-        }
-        .right{
-            display: flex;
-            justify-content: right;
-            gap: 1.5vw;
-            width: 30%;
-            align-items: center;
-    
-    
-        }
-        .hamb,.invi{
+
+        .left {
             display: none;
         }
-        
+
+        .mid {
+            background-image: url("../../assets/navbar/blacklogo.png");
+            width: 25%;
+            height: 10vw;
+            background-size: 100%;
+            background-position: center 50%;
+        }
+
+        .right {
+            display: none; /* Hidden in tablet view as we'll use the hamburger menu */
+        }
+
+        .hamb {
+            display: flex;
+            height: 10vw;
+            width: 40vw;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* Hamburger menu button for toggling */
+        .hamb .toggler {
+            width: 10vw;
+            height: 10vw;
+            background-image: url("../../assets/navbar/menu-button-of-three-horizontal-lines-svgrepo-com.svg");
+            background-position: center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        /* Navigation menu */
+        .nav-menu {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            position: absolute;
+            font-size: 1vw;
+            top: 9vw;
+            right: 0;
+            width: 18vw;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        /* Menu item styles */
+        .nav-menu div {
+            color: black;
+            text-decoration: none;
+            font-size: 2vw;
+            padding: 1.5vw;
+            width: 50%;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        /* Show menu when active */
+        .nav-menu.active {
+            display: flex;
+        }
     }
 }
-@media (max-width: 425px){
-    .navbar{
-        position:fixed;
-        z-index: 1000;
-        display: flex;
-        width : 100%;
+
+/* Mobile View: max-width 425px */
+@media (max-width: 425px) {
+    .navbar {
         height: 12vw;
         align-items: center;
         font-weight: 400;
         justify-content: right;
         gap: 30vw;
         font-size: 2vw;
-        font-weight: 400;
         background-color: rgb(255, 255, 255);
-        
+
         a {
             text-decoration: none;
             color: black;
         }
-        
-        .left{
+
+        .left {
             display: none;
         }
-        .mid{
+
+        .mid {
             background-image: url("../../assets/navbar/blacklogo.png");
             width: 25%;
             height: 10vw;
             background-size: 100%;
             background-position: center 50%;
-    
-    
         }
-        .right{
+
+        .right {
             display: none;
-    
         }
-        .hamb{
+
+        .hamb {
             display: flex;
             height: 10vw;
             width: 40vw;
             justify-content: space-around;
-            align-items: center ;
-            .toggler{
-                width: 10vw;
-                height: 10vw;
-                background-image: url("../../assets/navbar/menu-button-of-three-horizontal-lines-svgrepo-com.svg");
-                background-position: center;
-                background-size: 50%;
-                background-repeat: no-repeat;
-                /* background-color: azure; */
-            }
-            .nav-menu {
-                display: none;                    /* Hidden by default */
-                flex-direction: column;           /* Stack items vertically */
-                align-items: center;
-                color: black;              /* Center items */
-                background-color: #ffffff;           /* Background color */                    /* Spacing inside */
-                position: absolute; 
-                font-size: 3vw;  
-                height: 23vw;                     /* Full width for clickability */
-                top:10vw;              /* Overlay effect */                        /* Position below navbar */
-                right: 0;                         /* Align to right edge */
-                width: 20vw;                     /* Set width of menu */              /* Rounded corners */
-                transition: all 0.3s ease;        /* Smooth transition */
-                z-index: 1000;                    /* Ensure it overlays content */
-            }
-            
-            /* Menu item styles */
-            .nav-menu div {
-                color: black;              /* Center items */     /* Text color */
-                text-decoration: none;
-                font-size: 3vw;  
-                padding: 1.5vw;          /* Remove underline */        /* Add padding around text */
-                width: 50%;                     /* Full width for clickability */
-                text-align: center;               /* Center align text */
-                transition: background-color 0.2s; /* Smooth hover transition */
-            }
-            
-            
-            /* Show menu when active */
-            .nav-menu.active {
-                display: flex;                    /* Display menu */
-            }
+            align-items: center;
         }
-        
+
+        .hamb .toggler {
+            width: 10vw;
+            height: 10vw;
+            background-image: url("../../assets/navbar/menu-button-of-three-horizontal-lines-svgrepo-com.svg");
+            background-position: center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            position: absolute;
+            font-size: 3vw;
+            top: 10vw;
+            right: 0;
+            width: 20vw;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-menu div {
+            color: black;
+            text-decoration: none;
+            font-size: 3vw;
+            padding: 1.5vw;
+            width: 50%;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
     }
 }

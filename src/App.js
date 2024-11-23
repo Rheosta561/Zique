@@ -2,12 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
 import { createBrowserRouter,RouterProvider,Router,Routes,Route,BrowserRouter, Form } from 'react-router-dom';
 import Iframe from './components/iframe/Iframe';
 import Rform from './components/form/Rform';
 import Feedback from './components/feedback/Feedback';
+import Mumbai_collection from './pages/Explore/Collections/Mumbai/Mumbai_collection';
+import Gigi_main from './pages/Explore/Collections/Mumbai/restaurants/Gigi/Gigi_main';
 function App() {
   return (
     <div className="App">
@@ -17,9 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bot" element={<Iframe />} />
-          <Route path="/register" element={<Rform/>} />
+          <Route path="/create-palate" element={<Rform/>} />
           <Route path="/feedback" element={<Feedback/>} />
-
+          <Route path="/gigi" element={<Gigi_main/>} />
+          <Route path="/mumbai-collection" element={<Mumbai_collection/>}/>
         </Routes>
       </div>
     </BrowserRouter>

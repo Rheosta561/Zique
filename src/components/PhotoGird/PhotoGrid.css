@@ -1,0 +1,76 @@
+.mainframe{
+    display: grid;
+    grid-template-columns: repeat(4,19vw);
+    grid-template-rows: repeat(4,19vw);
+    gap: .1vw;
+    justify-content: center;
+    grid-template-areas:
+  "i1 i1 i2 i3"
+  "i4 i5 i5 i3"
+  "i6 i7 i8 i8"
+  "i6 i9 i9 i10"
+  ;
+
+}
+
+.item{
+    background-color: black;
+    border-radius: 1vw;
+    background-position: center;
+    background-size: cover;
+}
+.i1{
+    grid-area:i1 ;
+}
+.i2{
+    grid-area:i2 ;
+}.i3{
+    grid-area:i3 ;
+}.i4{
+    grid-area:i4 ;
+}.i5{
+    grid-area:i5 ;
+}.i6{
+    grid-area:i6 ;
+}.i7{
+    grid-area:i7 ;
+}.i8{
+    grid-area:i8 ;
+}.i9{
+    grid-area:i9 ;
+}.i10{
+    grid-area:i10 ;
+}
+@media(max-width:768px){
+    .mainframe{
+        grid-template-columns: repeat(4,21vw);
+        grid-template-rows: repeat(4,21vw);
+        gap: .3vw;
+
+    }
+    .item{
+        border-radius: 2vw;
+    }
+}
+@media(max-width:425px){
+    .mainframe{
+        grid-template-columns: repeat(5,18vw);
+        grid-template-rows: repeat(10,18vw);
+        gap: .3vw;
+        grid-template-areas:
+  "i1 i1 i1 i1 i1"
+  "i1 i1 i1 i1 i1"
+  "i2 i2 i3 i3 i3"  
+  "i2 i2 i3 i3 i3"
+  "i4 i4 i4 i5 i5"
+  "i4 i4 i4 i5 i5"
+  "i6 i6 i6 i6 i6"
+  "i6 i6 i6 i6 i6"
+  "i7 i7 i8 i8 i8"
+  "i7 i7 i8 i8 i8"
+  ;
+    }
+    .item{
+        border-radius: 2vw;
+    }
+}

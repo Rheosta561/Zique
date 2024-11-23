@@ -1,9 +1,9 @@
 import React from 'react'
 import './Header.css'
+import Navbar from '../../../components/navbar/Navbar'
 const Header = () => {
   return (
     <>
-    
     <div className='header'> 
       <div className='text'>
       <h1>LET US BE YOUR WINGMAN</h1>

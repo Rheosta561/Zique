@@ -1,0 +1,82 @@
+.explore{
+    scroll-margin-top: 6vw; 
+    width: 80%;
+    margin: 10vw auto;
+    h1{
+        font-size: 3.6vw;
+        font-weight: 500;
+        margin: 0;
+    }
+    h2{
+        font-size: 1.8vw;
+        font-weight: 100;
+        letter-spacing: .2vw;
+    }
+    .cities{
+        height: 32vw;
+        .mimage{
+            height: 28vw;
+            background-image: url("../../assets/Explore/Header/mumbai-1370023.jpg");
+            background-position: 50% 20%;
+            background-size: 100%;
+            border-radius: 1vw;
+        }
+        .underlink{
+            margin: 1vw;
+            font-size: 1.4vw;
+            line-height: 2vw;
+            font-weight: 100;
+            text-decoration: underline;
+            color: rgba(183, 16, 72, 1);
+        }
+    }
+}
+@media (max-width:768px){
+    .explore{
+        scroll-margin-top: 15vw; 
+
+        h1{
+            font-size: 4.5vw;
+        }
+        h2{
+            font-size: 1.8vw;
+            font-weight: 100;
+            letter-spacing: .1vw;
+        }
+        .cities{
+            height: 40vw;
+            .mimage{
+                height: 33vw;
+            }
+            .underlink{
+                margin: 1.5vw;
+            font-size: 1.8vw;
+            }
+        }
+    }
+}
+@media (max-width:425px){
+    .explore{
+        scroll-margin-top: 20vw; 
+
+        width: 90%;
+        h1{
+            font-size: 6vw;
+        }
+        h2{
+            font-size: 3vw;
+            font-weight: 100;
+            letter-spacing: .3vw;
+        }
+        .cities{
+            height: 60vw;
+            .mimage{
+                height: 50vw;
+            }
+            .underlink{
+                margin: 2.2vw;
+            font-size: 2.8vw;
+            }
+        }
+    }
+}
