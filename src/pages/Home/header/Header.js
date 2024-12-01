@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Header.css';
 
 const Header = () => {
     const [showText, setShowText] = useState(false);
-    const [typedText, setTypedText] = useState('');
-    const [isMobile, setIsMobile] = useState(false);  // New state for mobile detection
-
+    const [isMobile, setIsMobile] = useState(false);
+    const [typedText, setTypedText] = useState('');  // Track the typed text
     const fullText =
         "Zique offers personalized food recommendations based on your unique tastes, making dining out easier and more enjoyable. Discover new meals or enjoy your favorites with tailored suggestions.";
 
@@ -14,30 +13,33 @@ const Header = () => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 800); // Adjust this threshold for mobile devices
         };
-        handleResize(); // Call initially to set the state
+        handleResize(); // Set initial state
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     useEffect(() => {
-        if (showText && !isMobile) { // Only animate text on desktop
-            let index = 0;
-            const interval = setInterval(() => {
-                if (index < fullText.length) {
-                    setTypedText((prev) => prev + fullText[index]);
-                    index++;
-                } else {
-                    clearInterval(interval);
-                }
-            }, 5); // Typing speed
-            return () => clearInterval(interval);
-        } else if (isMobile) {
-            setTypedText(fullText); // On mobile, display the text immediately without typing animation
+        // When switching from mobile to desktop, reset text and start typing from the beginning
+        if (!isMobile) {
+            setTypedText('');  // Reset text on desktop
+            if (showText) {
+                let index = 0;
+                const interval = setInterval(() => {
+                    if (index < fullText.length) {
+                        setTypedText((prev) => prev + fullText[index]); // Update the typed text
+                        index++;
+                    } else {
+                        clearInterval(interval); // Stop when text is fully typed
+                    }
+                }, 5); // Speed of typing effect
+                return () => clearInterval(interval); // Cleanup interval
+            }
         } else {
-            setTypedText('');
+            // On mobile, directly show the full text
+            setTypedText(fullText);
         }
-    }, [showText, isMobile]);
+    }, [isMobile, showText]); // Trigger whenever isMobile or showText changes
 
     useEffect(() => {
         const timer1 = setTimeout(() => {
@@ -67,16 +69,14 @@ const Header = () => {
                 <h1 className="L">LET US BE</h1>
                 <h1 className="Y">YOUR</h1>
                 <h1 className="W">WINGMAN</h1>
-                {/* Always display h2 as text on mobile, clickable button on desktop */}
                 <h2
                     className={`interactive-button ${isMobile ? 'no-button' : ''}`}
-                    onClick={() => !isMobile && setShowText(!showText)}  // Clickable only on desktop
+                    onClick={() => !isMobile && setShowText(!showText)} 
                 >
                     FIND YOUR PERFECT DISH EVERYTIME.
                 </h2>
-                {/* On mobile, the text is always visible and not clickable */}
                 <p className={`description ${isMobile || showText ? 'visible' : ''}`}>
-                    {typedText}
+                    {typedText} 
                 </p>
             </div>
         </div>
