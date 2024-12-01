@@ -1,68 +1,94 @@
 /* General Styles */
 .collection {
-    display: flex;
-    margin: auto;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
 }
 
 .carasouel {
-    margin:  auto;
-    height: 40vw;
-    width: 82vw;
+  width: 100%;
+  margin-top: -20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .headtext {
-    font-size: 1.9vw;
-    font-weight: 200;
-    letter-spacing: 0.2vw;
-    margin-bottom: 2vw;
+  font-size: 4vw;
+  font-weight: 200;
+  letter-spacing: 0.2vw;
+  margin-bottom: 5vw;
+  text-align: center;
 }
 
-.swiper {
-    padding: 6vw;
-    width: 75vw;
+/* Desktop Swiper styles */
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 20px;
 }
 
-/* Tablet Styles */
-@media (max-width: 768px) {
-    .collection {
-        height: 170vw;
-    }
-    .carasouel {
-        margin:  10vw auto;
-        width: 82vw;
-    }
+.swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .headtext {
-        font-size: 3vw;
-        font-weight: 200;
-        letter-spacing: 0.2vw;
-        margin: 6vw;
-    }
-
-    .flexbox-container {
-        display: flex;
-        gap: 3vw;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.swiper-slide {
+  flex: 0 0 30%; /* Take 30% width on desktop, adjust if needed */
+  margin-bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 /* Mobile Styles */
-@media (max-width: 425px) {
-    .headtext {
-        font-size: 4vw;
-        font-weight: 200;
-        letter-spacing: 0vw;
-        margin: 8vw 0vw;
-    }
+.vertical-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
 
-    .flexbox-container {
-        display: flex;
-        gap: 1vw;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.vertical-card {
+  width: 100%;
+  margin-bottom: 20px; /* To add space between stacked cards */
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  /* Ensure Swiper is disabled on mobile */
+  .swiper-container {
+    display: block;
+  }
+
+  .swiper-wrapper {
+    display: block;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .vertical-cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 500px;
+    gap: 280px;
+  }
+  .headtext {
+    font-size: 4vw;
+    font-weight: 200;
+    letter-spacing: 0.2vw;
+    margin-bottom: 5vw;
+    text-align: center;
+  }
 }

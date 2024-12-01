@@ -1,25 +1,39 @@
-import React from 'react'
-import './Restaurant_card.css'
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import './Restaurant_card.css';
 
-const Restaurant_card = (props) => {
-    const navigate = useNavigate(); 
+const starIcon = process.env.PUBLIC_URL + '/Star.svg';
 
-    return (
-      <div className='card' onClick={props.onClick}>
-        <div className="card-image"
-          style={{
-            backgroundImage: `url(${props.image})`
-          }}
-        >
-          <h1> {props.title}</h1>
+
+
+const Restaurant_card = ({ title, rating, location, cuisines, price, image, onClick }) => {
+  return (
+    <div className="restaurant-card" onClick={onClick}>
+      {/* Image Section */}
+      <div
+        className="card-image"
+        style={{ backgroundImage: `url(${image})` }}
+      >
+        <div className="card-overlay">
+          <div className="card-header">
+            <h1 className="card-title">{title}</h1>
+            <div className="card-rating">
+              <span>{rating}</span>
+              <img src={starIcon} alt="Star" className="star-icon" />
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div className='card-desc'>
-          <h2>{props.desc}</h2>
+      {/* Description Section */}
+      <div className="card-desc">
+        <div className="card-details">
+          <div className="cuisines">{cuisines}</div>
+          <div className="price">{price}</div>
         </div>
-      </div>        
-    );
-}
+        <div className="location">{location}</div>
+      </div>
+    </div>
+  );
+};
 
-export default Restaurant_card
+export default Restaurant_card;
