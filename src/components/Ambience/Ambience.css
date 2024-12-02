@@ -1,0 +1,42 @@
+.ambience{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+}
+.ambience .ambience_header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.ambience .ambience_header .amb_text{
+    font-size: 3.5vw;
+}
+
+.ambience .ambience_header .amb-buttons{
+    display: flex;
+    padding: 1vw 0;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+
+.ambience .ambience_header .amb-buttons button{
+    padding: 0.5vw;
+    box-shadow: none;
+    font-size: 1.5vw;
+    width: 30%;
+    background-color: black;
+    color: #fff;
+    border-radius: 1.2vw;
+    cursor: pointer;
+    border: none;
+}
+.amb-line{
+    width: 100%;
+    border: .1vw solid gray;
+    margin-bottom: 5vw;
+}

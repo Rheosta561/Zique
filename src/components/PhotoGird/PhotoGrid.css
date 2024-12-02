@@ -1,14 +1,14 @@
 .mainframe{
     display: grid;
-    grid-template-columns: repeat(4,19vw);
-    grid-template-rows: repeat(4,19vw);
-    gap: .1vw;
+    grid-template-columns: repeat(4,18.5vw);
+    grid-template-rows: repeat(4,20vw);
+    gap: 1vw;
     justify-content: center;
     grid-template-areas:
-  "i1 i1 i2 i3"
-  "i4 i5 i5 i3"
-  "i6 i7 i8 i8"
-  "i6 i9 i9 i10"
+  "i1 i2 i3 i4"
+  "i5 i6 i7 i8"
+  "i9 i10 i11 i12"
+  "i13 i14 i15 i16"
   ;
 
 }
@@ -41,11 +41,23 @@
 }.i10{
     grid-area:i10 ;
 }
+.i11{
+    grid-area:i11 ;
+}.i12{
+    grid-area:i12;
+}.i13{
+    grid-area:i13;
+}.i14{
+    grid-area:i14;
+}.i15{
+    grid-area:i15;
+}.i16{
+    grid-area:i16 ;
+}
 @media(max-width:768px){
     .mainframe{
-        grid-template-columns: repeat(4,21vw);
         grid-template-rows: repeat(4,21vw);
-        gap: .3vw;
+        gap: 2vw;
 
     }
     .item{
@@ -54,23 +66,27 @@
 }
 @media(max-width:425px){
     .mainframe{
-        grid-template-columns: repeat(5,18vw);
-        grid-template-rows: repeat(10,18vw);
-        gap: .3vw;
+        grid-template-columns: repeat(5,16vw);
+        grid-template-rows: repeat(14,18vw);
+        gap: 1vw;
         grid-template-areas:
-  "i1 i1 i1 i1 i1"
-  "i1 i1 i1 i1 i1"
-  "i2 i2 i3 i3 i3"  
-  "i2 i2 i3 i3 i3"
-  "i4 i4 i4 i5 i5"
-  "i4 i4 i4 i5 i5"
-  "i6 i6 i6 i6 i6"
-  "i6 i6 i6 i6 i6"
+  "i1 i1 i1 i2 i2"
+  "i1 i1 i1 i2 i2"
+  "i3 i3 i4 i4 i4"  
+  "i3 i3 i4 i4 i4"  
+  "i5 i5 i5 i6 i6"
+  "i5 i5 i5 i6 i6"
   "i7 i7 i8 i8 i8"
   "i7 i7 i8 i8 i8"
+  "i9 i9 i9 i10 i10"
+  "i9 i9 i9 i10 i10"
+  "i11 i11 i12 i12 i12"
+  "i11 i11 i12 i12 i12"
+  "i13 i13 i13 i14 i14"
+  "i13 i13 i13 i14 i14"
   ;
     }
     .item{
-        border-radius: 2vw;
+        border-radius: 2.5vw;
     }
 }

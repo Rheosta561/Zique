@@ -1,37 +1,69 @@
 .gigi_main {
     display: flex;
     flex-direction: column;
-    margin: 2vw;
+    margin:0 10vw;
 }
 
-.header {
-    text-align: center;
-    margin-bottom: 1vw;
+.inner{
+    /* background-color: aqua; */
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin:7vw 0;
 }
 
-.text {
-    font-size: 5vw; /* Adjusted font size for restaurant name */
-    font-weight: bold;
-    color: #000; /* Restaurant name color */
-    margin-top: 60px
+.inner>.text_img{
+    /* background-color: antiquewhite ; */
+    padding: 1vw 0;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+    gap: 1vw;
+    justify-content: left;
 }
-
+.text_img>.text_restro{
+    color: black;
+    font-size: 5vw;
+}
+.text_img>.img{
+    height: 5vw;
+    width: 5vw;
+    border-radius: 5vw;
+    border: 1px solid black;
+}
+.restro-rating {
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    color: white;
+    background-color: rgba(58, 192, 46, 1);
+    padding: .4vw;
+    border-radius: .5vw;
+    margin-left: auto;
+    align-self: last baseline;  
+}
+.restro-rating .icon {
+    margin-left: 1vw; /* Space between rating and star */
+    height: 1.5vw; /* Adjust size of the star icon */
+    width: 1.5vw;
+}
 .line {
     width: 100%;
-    height: 1px;
-    background-color: #7B7B7B;
-    margin-top: -350px;
-    margin-bottom: 4vw;
+    height: .1vw;
+    background-color: gray;
+    border-radius: 1vw;
 }
 
 .restaurant-info {
     display: flex;
     justify-content: space-between;
     margin-top: 1vw;
+    height: auto;
 }
 
 .restaurant-info .left {
-    width: 15%;
+    width: 40%;
 }
 
 .restaurant-info .left .cuisine,
@@ -44,135 +76,159 @@
 }
 
 .restaurant-info .right {
-    width: 35%;
+    width: 45%;
+    display: flex;
+        flex-direction: column;
+        height: auto;
 }
 
 .restaurant-info .right .buttons {
     display: flex;
-    justify-content: space-around;
+    padding: 1vw 0;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1vw;
+}
+.restaurant-info .right .buttons .call{
+    display: none;
 }
 
 .restaurant-info .right .buttons button {
-    padding: 0.5vw 1vw;
-    font-size: 1vw;
-    background-color: #B71048;
+    padding: 0.5vw;
+    box-shadow: none;
+    font-size: 1.5vw;
+    width: 30%;
+    /* background-color: #B71048; */
+    background-color: black;
     color: #fff;
-    border-radius: 0.5vw;
+    border-radius: 1.2vw;
     cursor: pointer;
-    border-color: #B71048;
+    border: none;
 }
 
 .restaurant-info .right .recommendations {
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     padding: 1vw;
-    border-radius: 0.5vw;
+    border-radius: 1vw;
+    border: .1vw solid black;
+    padding: 2vw;
 }
 
 .restaurant-info .right .recommendations h4 {
     font-size: 1.5vw;
-    margin-bottom: 0.5vw;
+    margin-top: 0vw;
 }
 
 .restaurant-info .right .recommendations p {
     font-size: 1.2vw;
-}
-
-.zapier-bot {
-    margin-top: 3vw;
-}
-
-.zapier-bot .zapier-iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
+    color: gray;
 }
 
 /* Responsive for tablets and below */
 @media (max-width: 768px) {
     .gigi_main {
-        margin: 12vw auto;
+        margin:0 10vw;
     }
-
-    .header .text {
-        font-size: 4vw;
+    .inner{
+        margin:20vw 0;
     }
-
     .restaurant-info {
         flex-direction: column;
     }
-
-    .restaurant-info .left,
+    .restaurant-info .left{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .restaurant-info .left .second .phone{
+        display: none;
+    }
+    .restaurant-info .left .first{
+    }
+    .restaurant-info .left .second{
+        }
     .restaurant-info .right {
         width: 100%;
+        margin-top: 2vw;
+        gap: 2vw;
+        justify-content: center;
     }
 
     .restaurant-info .right .buttons {
-        justify-content: space-between;
+        justify-content: left;
+        gap: 1vw;
+    }
+    .restaurant-info .right .buttons .call{
+        display: block;
+        border:.2vw solid black;
+        color: black;
+        background-color: white;
+        margin-left: auto;
+
     }
 
     .restaurant-info .right .buttons button {
-        font-size: 3vw;
+        font-size: 2vw;
+        width: 19%;
+        border-radius: 1.8vw;
+        padding: 1vw;
     }
 
     .restaurant-info .right .recommendations {
-        padding: 3vw;
+        border-radius: 3vw;
+        padding: 2vw 5vw;
     }
 
     .restaurant-info .right .recommendations h4 {
-        font-size: 3.5vw;
+        font-size: 3vw;
+        margin: 2vw 0;
     }
 
     .restaurant-info .right .recommendations p {
-        font-size: 3vw;
-    }
-
-    .zapier-bot .zapier-iframe {
-        height: 300px;
+        font-size: 2vw;
+        width: 90%;
     }
 }
 
 /* Responsive for mobile devices */
 @media (max-width: 425px) {
     .gigi_main {
-        margin: 16vw auto;
+        margin: 0 5vw;
     }
-
-    .header .text {
-        font-size: 5vw;
+    .inner{
+        margin:20vw 0;
     }
-
-    .restaurant-info {
-        flex-direction: column;
-    }
-
-    .restaurant-info .left,
     .restaurant-info .right {
         width: 100%;
+        margin-top: 8vw;
+        gap: 4vw;
+        justify-content: center;
     }
 
     .restaurant-info .right .buttons {
-        flex-direction: column;
+        justify-content: left;
+        gap: 1vw;
     }
 
     .restaurant-info .right .buttons button {
-        font-size: 4vw;
-        margin-bottom: 2vw;
+        font-size: 3vw;
+        width: 21%;
+        border-radius: 3.5vw;
+        padding: 2vw;
     }
 
     .restaurant-info .right .recommendations {
-        padding: 4vw;
+        border-radius: 3.5vw;
+        padding: 2vw 3vw;
     }
 
     .restaurant-info .right .recommendations h4 {
-        font-size: 4.5vw;
+        font-size: 5vw;
+        margin-bottom: 0;
     }
 
     .restaurant-info .right .recommendations p {
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 
-    .zapier-bot .zapier-iframe {
-        height: 250px;
-    }
 }

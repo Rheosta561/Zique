@@ -1,0 +1,42 @@
+.food{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+}
+.food .food_header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.food .food_header .food_text{
+    font-size: 3.5vw;
+}
+
+.food .food_header .food-buttons{
+    display: flex;
+    padding: 1vw 0;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+
+.food .food_header .food-buttons button{
+    padding: 0.5vw;
+    box-shadow: none;
+    font-size: 1.5vw;
+    width: 30%;
+    background-color: black;
+    color: #fff;
+    border-radius: 1.2vw;
+    cursor: pointer;
+    border: none;
+}
+.food-line{
+    width: 100%;
+    border: .1vw solid gray;
+    margin-bottom: 5vw;
+}

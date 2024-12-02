@@ -3,11 +3,11 @@
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  margin: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
-  position: absolute; /* Positioning for responsive placement */
-  width: 390px; /* Default width for desktop */
-  height: 350px; /* Default height for desktop */
+  width: 26vw; /* Default width for desktop */
+  height: auto; /* Default height for desktop */
   gap: 0px;
   opacity: 1; /* Ensures visibility */
 }
@@ -19,7 +19,7 @@
 /* Image Section */
 .card-image {
   position: relative;
-  height: 260px;
+  height: 18.056vw;
   background-size: cover;
   background-position: center;
 }
@@ -42,11 +42,11 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-right: 10px; /* Prevents the rating from going off-screen */
+  padding-right: .5vw; 
 }
 
 .card-title {
-  font-size: 25px;
+  font-size: 1.736vw;
   font-weight: bold;
   margin: 0;
   white-space: nowrap; /* Prevents wrapping */
@@ -57,35 +57,35 @@
 .card-rating {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 0.972vw;
   background-color: rgba(58, 192, 46, 1);
-  padding: 3px;
-  border-radius: 3px;
-  position: relative; /* Enables positioning adjustments */
-  left: -10px; /* Moves the rating further to the left */
+  padding: .2vw;
+  border-radius: .2vw;
+  position: relative; 
+  left: -0.7vw; 
 }
 
 
 /* Description Section */
 .card-desc {
-  padding: 10px;
-  font-size: 14px;
+  padding: 0.694vw;
+  font-size: 0.972vw;
   display: flex;
   flex-direction: column;
-  gap: 5px; /* Adds consistent spacing between items */
+  gap: 0.347vw; /* Adds consistent spacing between items */
 }
 
 .card-rating .star-icon {
-  margin-left: 5px; /* Space between rating and star */
-  height: 14px; /* Adjust size of the star icon */
-  width: 14px;
+  margin-left: 0.347vw; /* Space between rating and star */
+  height: .972vw; /* Adjust size of the star icon */
+  width: .972vw;
 }
 
 /* Cuisines and Price Section */
 .card-details {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: .972vw;
   font-weight: normal;
   color: black;
   font-weight: bold;
@@ -105,7 +105,7 @@
 
 /* Location Section */
 .location {
-  font-size: 13px;
+  font-size: .8vw;
   color: black;
   text-align: left;
   font-weight: bold;
@@ -124,6 +124,84 @@
     height: 200px;
     background-size: cover;
     background-position: center;
+  }
+  .card-overlay{
+    padding: 10px;
+  }
+  .card-header{
+    padding-right:10px ;
+  }
+  .card-title{
+    font-size: 25px;
+  }
+  .card-rating {
+    font-size: 14px;
+    padding: 3px;
+    border-radius: 3px;
+    left: -10px; /* Moves the rating further to the left */
+  }
+  .card-desc {
+    padding: 10px;
+    font-size: 14px;
+    gap: 5px; /* Adds consistent spacing between items */
+  }
+  .card-rating .star-icon {
+    margin-left: 5px; /* Space between rating and star */
+    height: 14px; /* Adjust size of the star icon */
+    width: 14px;
+  }
+  .card-details{
+    font-size: 14px;
+  }
+  .location {
+    font-size: 13px;
+  }
+
+}
+@media (max-width: 420px) {
+  .restaurant-card {
+      width: 90.476vw; /* Mobile/tablet width */
+      height: auto; /* Mobile/tablet height */
+      margin-top: 10px;
+     
+  }
+  .card-image {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-overlay{
+    padding: 2.381vw;
+  }
+  .card-header{
+    padding-right:2.381vw ;
+  }
+  .card-title{
+    font-size: 5.952vw;
+  }
+  .card-rating {
+    font-size: 3.333vw;
+    padding: 3px;
+    border-radius: 3px;
+    left: -10px; /* Moves the rating further to the left */
+  }
+  .card-desc {
+    padding: 10px;
+    font-size: 3.333vw;
+    gap: 1.19vw; /* Adds consistent spacing between items */
+  }
+  .card-rating .star-icon {
+    margin-left: 1.19vw; /* Space between rating and star */
+    height: 3.333vw; /* Adjust size of the star icon */
+    width: 3.333vw;
+  }
+  .card-details{
+    font-size: 3.333vw;
+  }
+  .location {
+    font-size: 3vw;
+    width: 80%;
   }
   
 }

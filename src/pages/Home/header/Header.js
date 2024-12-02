@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
     const [showText, setShowText] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const [typedText, setTypedText] = useState('');  // Track the typed text
+    const [typedText, setTypedText] = useState(" ");  // Track the typed text
     const fullText =
         "Zique offers personalized food recommendations based on your unique tastes, making dining out easier and more enjoyable. Discover new meals or enjoy your favorites with tailored suggestions.";
 
@@ -22,7 +22,7 @@ const Header = () => {
     useEffect(() => {
         // When switching from mobile to desktop, reset text and start typing from the beginning
         if (!isMobile) {
-            setTypedText('');  // Reset text on desktop
+            setTypedText(" ");  // Reset text on desktop
             if (showText) {
                 let index = 0;
                 const interval = setInterval(() => {

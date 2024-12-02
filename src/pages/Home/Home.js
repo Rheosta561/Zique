@@ -10,8 +10,8 @@ const Home = () => {
     <div className='home' id="home">
       <Header/>
       <Explore/>
-      {/* <BotPage/> */}
-      {/* <About/> */}
+      {/* <BotPage/>
+      <About/> */}
       <Contact/>
     </div>
   )

@@ -1,94 +1,115 @@
-/* General Styles */
 .collection {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: auto;
   height: 100vh;
 }
 
 .carasouel {
+  margin: auto;
+  height: auto;
+  padding: 1vw;
+  width: 90vw;
+}
+.head-city{
+  font-size: 3.5vw;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+}
+
+.carasouel-line{
   width: 100%;
-  margin-top: -20vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border: .1vw solid rgb(141, 136, 136);
+  margin: 0 0 2vw 0;
+  border-radius: 1vw;
 }
-
 .headtext {
-  font-size: 4vw;
-  font-weight: 200;
-  letter-spacing: 0.2vw;
-  margin-bottom: 5vw;
-  text-align: center;
+  font-size: 1.5vw;
+  font-weight: 400;
+  letter-spacing: 0.1vw;
+  margin-bottom: 2vw;
 }
 
-/* Desktop Swiper styles */
-.swiper-container {
+.swiper {
   display: flex;
   justify-content: center;
+  height: 30vw;
+  padding: auto;
+  width: 100%;
+
+}
+.slide{
+  width: 18vw;
+  padding-top: 2vw;
+  display: flex;
   align-items: center;
-  padding: 0;
-  gap: 20px;
-}
-
-.swiper-wrapper {
-  display: flex;
   justify-content: center;
-  gap: 20px;
 }
+/* .swiper-pagination {
+ 
+} */
 
-.swiper-slide {
-  flex: 0 0 30%; /* Take 30% width on desktop, adjust if needed */
-  margin-bottom: 0;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .collection {
+      height: auto;
+  }
+  .carasouel {
+      margin:  14vw auto;
+      width: 82vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: first baseline;
+
+  }
+  .headtext {
+    font-size:3vw;
+    font-weight: 400;
+    letter-spacing: 0.1vw;
+    margin-bottom: 6vw;
+
+  }
+
+  .head-city{
+    font-size: 6vw;
+    font-weight: 500;
+    letter-spacing: 0.1vw;
+
+  }
+
+  .flexbox-container {
+      display: flex;
+      gap: 5vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+  }
 }
 
 /* Mobile Styles */
-.vertical-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-
-.vertical-card {
-  width: 100%;
-  margin-bottom: 20px; /* To add space between stacked cards */
-  display: flex;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  /* Ensure Swiper is disabled on mobile */
-  .swiper-container {
-    display: block;
-  }
-
-  .swiper-wrapper {
-    display: block;
-  }
-
-  .swiper-slide {
-    width: 100%;
-    margin-bottom: 20px;
-    display: block;
-  }
-
-  .vertical-cards {
-    display: flex;
-    flex-direction: column;
-    margin-top: 500px;
-    gap: 280px;
-  }
+@media (max-width: 425px) {
   .headtext {
-    font-size: 4vw;
-    font-weight: 200;
-    letter-spacing: 0.2vw;
-    margin-bottom: 5vw;
-    text-align: center;
+      font-size: 5vw;
+      font-weight: 200;
+      letter-spacing: 0vw;
+      margin: 2vw 0 8vw 0;
+  }
+  .carasouel{
+    /* background-color: red; */
+    width: 95vw;
+    padding: auto;
+    margin: 16vw 5vw;
+  }
+  .head-city{
+    font-size: 9vw;
+    font-weight: 500;
+    letter-spacing: 0.1vw;
+
+  }
+
+  .flexbox-container {
+      display: flex;
+      gap: 10vw;
   }
 }
