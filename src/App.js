@@ -21,10 +21,10 @@ function App() {
           <Route path="/bot" element={<Iframe />} />
           <Route path="/create-palate" element={<Rform/>} />
           <Route path="/feedback" element={<Feedback/>} />
-          <Route path="/gigi" element={<Gigi_main/>} />
-          <Route path="/lyla" element={<Lyla_main/>} />
-          <Route path="/shy" element={<Shy_main/>} />
-          <Route path="/mumbai-collection" element={<Mumbai_collection/>}/>
+          <Route path="/explore/:city/:restaurant" element={<Gigi_main/>} />
+          <Route path="/explore/:city/:restaurant" element={<Lyla_main/>} />
+          <Route path="/explore/:city/:restaurant" element={<Shy_main/>} />
+          <Route path="/explore/:city" element={<Mumbai_collection/>}/>
         </Routes>
       </div>
     </BrowserRouter>

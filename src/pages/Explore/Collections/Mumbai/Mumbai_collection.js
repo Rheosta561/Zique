@@ -10,17 +10,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/a11y';
 import sampleimg from '../../../../assets/Explore/Header/RC.jpeg';
 import useWindowSize from '../../../../components/useWindowSize';
-// import sampleimg from '../../../../assets/Explore/Header/image.png';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Mumbai_collection = () => {
   const size = useWindowSize();
   const width = size.width;
   const navigate = useNavigate();
+  const { city } = useParams();
 
-  // Move handleClickGigi inside the component
-  const handleClickGigi = () => {
-    navigate('/gigi');
+  //updated click function to dynamically route to restaurants  
+  const handleClickGigi = (title) => {
+    navigate(`/explore/${city}/${title}`);
   };
 
   const cardData = [
@@ -72,32 +72,31 @@ const Mumbai_collection = () => {
       image: sampleimg,
       fun: handleClickGigi,
     },
-    
   ];
-
 
   return (
     <div className="collection">
       <div className="carasouel">
-      <div className='head-city'>
-          Mumbai
+        <div className='head-city'>
+          {city} 
         </div>
         <hr className='carasouel-line'/>
         <div className='headtext'>
-          All collections in Mumbai
+          All collections in {city}
         </div>
         {width <= 768 ? (
           <div className="flexbox-container">
             {cardData.map((element, index) => (
               <Restaurant_card
-              key={index}
-              title={element.title}
-              rating={element.rating}
-              location={element.location}
-              cuisines={element.cuisines}
-              price={element.price}
-              image={element.image}
-              onClick={element.fun}
+                key={index}
+                title={element.title}
+                rating={element.rating}
+                location={element.location}
+                cuisines={element.cuisines}
+                price={element.price}
+                image={element.image}
+                onClick={() => element.fun(element.title)} 
+                // passing title as a apramter in fun(funciton)
               />
             ))}
           </div>
@@ -109,13 +108,12 @@ const Mumbai_collection = () => {
             slidesPerView={3}
             freeMode={true}
             mousewheel={true}
-
             style={{
               '--swiper-pagination-color': '#000000',
               'el': '.swiper-pagination',
             }}
             centeredSlides={false}
-            modules={[Navigation, Pagination, A11y, Autoplay,Mousewheel,FreeMode]}
+            modules={[Navigation, Pagination, A11y, Autoplay, Mousewheel, FreeMode]}
             pagination={{ clickable: true }}
             loop={true}
           >
@@ -128,7 +126,7 @@ const Mumbai_collection = () => {
                    cuisines={element.cuisines}
                    price={element.price}
                    image={element.image}
-                   onClick={element.fun}
+                   onClick={() => element.fun(element.title)} 
                 />
               </SwiperSlide>
             ))}

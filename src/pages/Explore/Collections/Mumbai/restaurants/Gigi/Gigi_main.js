@@ -2,6 +2,7 @@ import React from 'react';
 import sampleimg from '../../../../../../assets/Explore/Header/RC.jpeg';
 import './Gigi_main.css';
 import Restaurant_main from '../../../../../../components/Restaurant_main/Restaurant_main';
+import { useParams } from 'react-router-dom';
 
 const arr = [
     sampleimg,
@@ -22,11 +23,13 @@ const arr = [
     sampleimg
 ];
 
+
 const Gigi_main = () => {
+    const {restaurant}= useParams();
     return (
         <div className="gigi_main">
             <Restaurant_main
-            name = "Gigi, Worli"
+            name = {restaurant}
             rating = "4.4"
             cuisine = "Japanese & European"
             address = "some address"

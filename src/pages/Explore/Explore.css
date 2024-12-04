@@ -31,7 +31,7 @@
         }
 
         /* Text styling */
-        .mumbai-text {
+        .city-text {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -48,7 +48,8 @@
         }
 
         /* When hovering, make the text visible */
-        .mimage:hover .mumbai-text {
+        /* changing the class name to city txt */
+        .mimage:hover .city-text {
             opacity: 1; /* Make text visible on hover */
         }
     }
