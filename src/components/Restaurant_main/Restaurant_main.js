@@ -3,6 +3,7 @@ import './Restaurant_main.css';
 import Ambience from '../Ambience/Ambience';
 import Food from '../Food/Food';
 import { useNavigate } from 'react-router-dom';
+import Menu from '../Menu/Menu';
 
 const starIcon = process.env.PUBLIC_URL + '/Star.svg';
 
@@ -43,9 +44,9 @@ const Restaurant_main = (props) => {
           </div>
           <div className="right">
             <div className="buttons">
-              <button onClick={() => handleClick("food")}><a href='#food'>Food</a></button>
-              <button onClick={() => handleClick("ambience")}><a href='#ambience'>Ambience</a></button>
-              <button onClick={() => handleClick("menu")}>Menu</button>
+              <button onClick={() => handleClick("food")}><a href='#FOOD'>Food</a></button>
+              <button onClick={() => handleClick("ambience")}><a href='#AMB'>Ambience</a></button>
+              <button onClick={() => handleClick("menu")}><a href='#MENU'>Menu</a></button>
               <button className='call'>Call us</button>
             </div>
             <div className="recommendations">
@@ -58,14 +59,16 @@ const Restaurant_main = (props) => {
         </div>
         
         {/* Section Content */}
-        <div id="ambience">
+        <div id="AMB">
           <Ambience arr={props.amb_arr} />
         </div>
-        <div id='food'>
+        <div id='FOOD'>
           <Food arr={props.food_arr} />
         </div>
-        <div id="menu">
-          {/* Add the content for Menu section */}
+        <br></br>
+        <br></br>
+        <div id="MENU">
+          <Menu/>
         </div>
       </div>
     </div>
