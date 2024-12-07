@@ -1,74 +1,66 @@
-import React from 'react'
-import './PhotoGrid.css'
-const PhotoGrid = (props) => {
-  return (
-    <div className='mainframe'>
-      <div className='item i1'
-      style={{
-        backgroundImage: `url(${props.arr[0]})`
-      }}></div>
-      <div className='item i2'
-      style={{
-        backgroundImage: `url(${props.arr[1]})`
-      }}></div>
-      <div className='item i3'
-      style={{
-        backgroundImage: `url(${props.arr[2]})`
-      }}></div>
-      <div className='item i4'
-      style={{
-        backgroundImage: `url(${props.arr[3]})`
-      }}></div>
-      <div className='item i5'
-      style={{
-        backgroundImage: `url(${props.arr[4]})`
-      }}></div>
-      <div className='item i6'
-      style={{
-        backgroundImage: `url(${props.arr[5]})`
-      }}></div>
-      <div className='item i7'
-      style={{
-        backgroundImage: `url(${props.arr[6]})`
-      }}></div>
-      <div className='item i8'
-      style={{
-        backgroundImage: `url(${props.arr[7]})`
-      }}></div>
-      <div className='item i9'
-      style={{
-        backgroundImage: `url(${props.arr[8]})`
-      }}></div>
-      <div className='item i10'
-      style={{
-        backgroundImage: `url(${props.arr[9]})`
-      }}></div>
-      <div className='item i11'
-      style={{
-        backgroundImage: `url(${props.arr[10]})`
-      }}></div>
-      <div className='item i12'
-      style={{
-        backgroundImage: `url(${props.arr[11]})`
-      }}></div>
-      <div className='item i13'
-      style={{
-        backgroundImage: `url(${props.arr[12]})`
-      }}></div>
-      <div className='item i14'
-      style={{
-        backgroundImage: `url(${props.arr[13]})`
-      }}></div>
-      <div className='item i15'
-      style={{
-        backgroundImage: `url(${props.arr[14]})`
-      }}></div>
-      <div className='item i16'
-      style={{
-        backgroundImage: `url(${props.arr[15]})`
-      }}></div>
-    </div>
-  )
-}
+import React, { useState } from 'react';
+import './PhotoGrid.css';
 
-export default PhotoGrid
+const PhotoGrid = ({ arr }) => {
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  // Function to handle image click
+  const handleImageClick = (index) => {
+    setSelectedIndex(index);
+  };
+
+  // Function to close the overlay
+  const closeOverlay = () => {
+    setSelectedIndex(null);
+  };
+
+  // Navigate to the previous image
+  const showPrevious = (e) => {
+    e.stopPropagation(); // Prevent overlay click from closing
+    setSelectedIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : arr.length - 1));
+  };
+
+  // Navigate to the next image
+  const showNext = (e) => {
+    e.stopPropagation(); // Prevent overlay click from closing
+    setSelectedIndex((prevIndex) => (prevIndex < arr.length - 1 ? prevIndex + 1 : 0));
+  };
+
+  return (
+    <>
+      {/* Photo Grid */}
+      <div className="mainframe">
+        {arr.map((image, index) => (
+          <div
+            key={index}
+            className={`item i${index + 1}`}
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+            onClick={() => handleImageClick(index)}
+          ></div>
+        ))}
+      </div>
+
+      {/* Overlay with Image Viewer */}
+      {selectedIndex !== null && (
+        <div className="overlay" onClick={closeOverlay}>
+          <div className="photo-container" onClick={(e) => e.stopPropagation()}>
+            <button className="nav-btn prev-btn" onClick={showPrevious}>
+              &#8592;
+            </button>
+            <img src={arr[selectedIndex]} alt="Selected" />
+            <button className="nav-btn next-btn" onClick={showNext}>
+              &#8594;
+            </button>
+            <button className="close-btn" onClick={closeOverlay}>
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default PhotoGrid;
