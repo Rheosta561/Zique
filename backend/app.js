@@ -41,7 +41,21 @@ app.get('/', async (req, res) => {
 // Route to handle POST request for adding a restaurant
 app.post('/add-restaurant', async (req, res) => {
   try {
-    const { name, ratings, cuisine, address, dateAndTime, price, phone, food, ambience } = req.body;
+    const {
+      name,
+      ratings,
+      cuisine,
+      address,
+      dateAndTime,
+      price,
+      phone,
+      food,
+      ambience,
+      menu, // New field
+      profileImage, // New field
+      chatbot, // New field
+      location // New field
+    } = req.body;
 
     const newRestaurant = new Restaurant({
       name,
@@ -51,8 +65,12 @@ app.post('/add-restaurant', async (req, res) => {
       dateAndTime,
       price,
       phone,
-      food,
-      ambience
+      food: food.split(','), // Convert comma-separated food items to array
+      ambience: ambience.split(','), // Convert comma-separated ambience descriptions to array
+      menu,
+      profileImage,
+      chatbot,
+      location // Assign the location field
     });
 
     const savedRestaurant = await newRestaurant.save();
@@ -62,6 +80,7 @@ app.post('/add-restaurant', async (req, res) => {
     res.status(500).send("Error adding restaurant.");
   }
 });
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

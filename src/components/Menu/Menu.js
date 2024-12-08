@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Menu() {
-  const pdfUrl = "https://drive.google.com/file/d/1DLsGdogDnpkgpb2Gk5tJD_5MsS8sc6dQ/preview"; 
+function Menu(props) {
+  const pdfUrl = props.source;
   const handleFoodClick =() =>{
     window.location.hash = '#FOOD'
 }

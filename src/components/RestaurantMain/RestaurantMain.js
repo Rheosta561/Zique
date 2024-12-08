@@ -7,12 +7,12 @@ import Menu from '../Menu/Menu';
 
 const starIcon = process.env.PUBLIC_URL + '/Star.svg';
 
-const Restaurant_main = (props) => {
+const RestaurantMain = (props) => {
   const navigate = useNavigate();
 
   const handleClick = (section) => {
-    // sectional routing function creation 
-    navigate(`#${section}`); 
+    // Use navigate for scrolling
+    navigate(`#${section}`);
   };
 
   return (
@@ -20,7 +20,9 @@ const Restaurant_main = (props) => {
       <div className="inner">
         {/* Title Section */}
         <div className="text_img">
-          <div className='img'></div>
+          <div className='img'>
+            <img src={props.image || '/default-image.jpg'} alt="Restaurant" />
+          </div>
           <div className='text_restro'>{props.name}</div>
           <div className="restro-rating">
             <span>{props.rating}</span>
@@ -44,16 +46,16 @@ const Restaurant_main = (props) => {
           </div>
           <div className="right">
             <div className="buttons">
-              <button onClick={() => handleClick("food")}><a href='#FOOD'>Food</a></button>
-              <button onClick={() => handleClick("ambience")}><a href='#AMB'>Ambience</a></button>
-              <button onClick={() => handleClick("menu")}><a href='#MENU'>Menu</a></button>
+              <button onClick={() => handleClick("food")}>Food</button>
+              <button onClick={() => handleClick("ambience")}>Ambience</button>
+              <button onClick={() => handleClick("menu")}>Menu</button>
               <button className='call'>Call us</button>
             </div>
             <div className="recommendations">
               <h4>Get Recommendations</h4>
               <hr />
               <p>Using our chatbot, Zico!</p>
-              <p>Zico is a smart dining assistant that suggests the perfect dishes based on your cravings and Palate Crafted.</p>
+              <p>Zico is a smart dining assistant that suggests the perfect dishes based on your cravings and palate crafted.</p>
             </div>
           </div>
         </div>
@@ -65,14 +67,14 @@ const Restaurant_main = (props) => {
         <div id='FOOD'>
           <Food arr={props.food_arr} />
         </div>
-        <br></br>
-        <br></br>
+        <br />
+        <br />
         <div id="MENU">
-          <Menu/>
+          <Menu source = {props.source}/>
         </div>
       </div>
     </div>
   );
 };
 
-export default Restaurant_main;
+export default RestaurantMain;
