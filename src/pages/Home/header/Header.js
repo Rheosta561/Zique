@@ -43,17 +43,17 @@ const Header = () => {
 
     useEffect(() => {
         const timer1 = setTimeout(() => {
-            document.querySelector('.L').classList.add('underline');
+            document.querySelector('.L1').classList.add('underline');
         }, 500);
 
         const timer2 = setTimeout(() => {
-            document.querySelector('.L').classList.remove('underline');
-            document.querySelector('.Y').classList.add('underline');
+            document.querySelector('.L1').classList.remove('underline');
+            document.querySelector('.Y2').classList.add('underline');
         }, 1500);
 
         const timer3 = setTimeout(() => {
-            document.querySelector('.Y').classList.remove('underline');
-            document.querySelector('.W').classList.add('underline');
+            document.querySelector('.Y2').classList.remove('underline');
+            document.querySelector('.W3').classList.add('underline');
         }, 2500);
 
         return () => {
@@ -64,16 +64,16 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="header">
-            <div className="text">
-                <h1 className="L">LET US BE</h1>
-                <h1 className="Y">YOUR</h1>
-                <h1 className="W">WINGMAN</h1>
+        <div className="Mheader">
+            <div className="htext">
+                <h1 className="L1">LET US BE</h1>
+                <h1 className="Y2">YOUR</h1>
+                <h1 className="W3">WINGMAN</h1>
                 <h2
                     className={`interactive-button ${isMobile ? 'no-button' : ''}`}
                     onClick={() => !isMobile && setShowText(!showText)} 
                 >
-                    FIND YOUR PERFECT DISH EVERYTIME.
+                    FIND YOUR PERFECT DISH EVERYTIME
                 </h2>
                 <p className={`description ${isMobile || showText ? 'visible' : ''}`}>
                     {typedText} 

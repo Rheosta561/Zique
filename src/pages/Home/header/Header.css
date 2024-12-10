@@ -1,269 +1,260 @@
 /* Header Styling */
-.header {
-    position: relative; 
-    z-index: 1;
-    display: flex;
-    justify-content: left;
-    align-items: flex-start; 
-    height: 50vw; 
-    padding: 2vw; 
-    background-image: url("../../../assets/home/shpulder.png");
-    background-color:black;
-    /* width: 100%; */
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: 80% 100%;
-    transition: background-size 0.3s ease-in-out;
+.Mheader {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  height: 50vw;
+  padding: 2vw;
+  background-image: url("../../../assets/home/shpulder.png");
+  background-color: black;
+  /* width: 100%; */
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 80% 100%;
+  transition: background-size 0.3s ease-in-out;
 }
 
-.text {
-    width: 50%;
-    padding: 1vw;
-    border-radius: 2vw;
-    color: rgb(255, 255, 255);
-    text-shadow: 3px 3px 8px rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: first baseline;
-    align-items: flex-start;
-    margin-left: 5vw;
-    transition: transform 0.3s ease-in-out; 
-    height: 45vw;
+.htext {
+  margin-top: 9.8vw;
+  width: 50%;
+  padding: 1vw;
+  border-radius: 2vw;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 8px rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  align-items: flex-start;
+  margin-left: 5vw;
+  transition: transform 0.3s ease-in-out;
+  height: 45vw;
 }
 
 h1 {
-    font-size: 4.5vw;
-    font-weight: 100;
-    letter-spacing: .5vw;
-    position: relative;
-    margin: 0;
-    display: block;
+  font-size: 4.5vw;
+  font-weight: 100;
+  letter-spacing: 0.5vw;
+  position: relative;
+  margin: 0;
+  display: block;
 }
 
-
-.L, .Y, .W {
-    position: relative;
-    font-weight: 300;
-    color: white;
-    display: inline-block;
-    text-align: left;
-    margin-bottom: 1vw;
+.L1,
+.Y2,
+.W3 {
+  position: relative;
+  font-weight: 300;
+  color: white;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 1vw;
 }
 
-.L::before,
-.Y::before,
-.W::before {
-    position: absolute;
-    content: '';
-    width: 0;
-    left: 0;
-    height: 2px; 
-    bottom: -5px;
-    border-radius: 5rem;
-    background: white;
-    transition: width 0.3s ease-in-out;
+.L1::before,
+.Y2::before,
+.W3::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  height: 2px;
+  bottom: -5px;
+  border-radius: 5rem;
+  background: white;
+  transition: width 0.3s ease-in-out;
 }
 
-
-.L.underline::before {
-    animation: underlineLeftToRight 0.5s forwards, disappearUnderline 0.3s 0.5s forwards;
+.L1.underline::before {
+  animation: underlineLeftToRight 0.5s forwards,
+    disappearUnderline 0.3s 0.5s forwards;
 }
 
-
-.Y.underline::before {
-    animation: underlineRightToLeft 0.5s forwards, disappearUnderline 0.3s 0.5s forwards;
+.Y2.underline::before {
+  animation: underlineRightToLeft 0.5s forwards,
+    disappearUnderline 0.3s 0.5s forwards;
 }
 
-
-.W.underline::before {
-    animation: underlineLeftToRightPartial 0.6s forwards, disappearUnderline 0.3s 0.6s forwards;
+.W3.underline::before {
+  animation: underlineLeftToRightPartial 0.6s forwards,
+    disappearUnderline 0.3s 0.6s forwards;
 }
-
 
 @keyframes underlineLeftToRight {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%; 
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-
 @keyframes underlineRightToLeft {
-    from {
-      width: 0;
-      right: 0; 
-      transform: scaleX(1); 
-    }
-    to {
-      width: 100%;
-      left: 0;  
-      transform: scaleX(-1); 
-    }
+  from {
+    width: 0;
+    right: 0;
+    transform: scaleX(1);
   }
-
+  to {
+    width: 100%;
+    left: 0;
+    transform: scaleX(-1);
+  }
+}
 
 @keyframes underlineLeftToRightPartial {
-    from {
-        width: 0;
-    }
-    to {
-        width: 95%;
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
 }
 
 @keyframes disappearUnderline {
-    from {
-        width: 100%; 
-    }
-    to {
-        width: 0%; 
-    }
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
 
-
 .interactive-button {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 2vw;
-    padding: 0.5vw 1vw;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2px solid white;
-    border-radius: 0.5vw;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-align: center;
-    white-space: nowrap;  
-    overflow: hidden;     
-    text-overflow: ellipsis;
-    max-width: 90%;        
+  display: inline-block;
+  cursor: pointer;
+  font-size: 2vw;
+  /* padding: 0.5vw 1vw; */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid white;
+  border-radius: 0.5vw;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
 }
 
 .interactive-button:hover {
-    transform: scale(1.03); 
+  transform: scale(1.03);
 }
-
 
 .description {
-    display: none;
-    color: white;
-    margin-top: 1vw;
-    font-size: 1.2vw;
-    line-height: 1.8vw;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 20vw;
-    text-align: left;
-    
+  display: none;
+  color: white;
+  margin-top: 1vw;
+  font-size: 1.2vw;
+  line-height: 1.8vw;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 20vw;
+  text-align: left;
 }
-
 
 .description.visible {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
-
-
-
-
 @media (max-width: 768px) {
-    .header {
-        margin-top: 10vw;
-        height: 85vw;
-        background-size: 120%;
-        background-repeat: no-repeat;
-        background-position: -50% 100%;
+  .header {
+    margin-top: 10vw;
+    height: 85vw;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: -50% 100%;
+  }
+
+  .text {
+    width: 60vw;
+    height: auto;
+    color: white;
+    text-shadow: 1px 1px 6px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column; /* Ensure elements stack vertically */
+    align-items: flex-start; /* Align items to the left */
+
+    h1 {
+      font-size: 5.5vw;
+      font-weight: 100;
+      letter-spacing: 0.6vw;
     }
 
-    .text {
-        width: 60vw;
-        height: auto;
-        color: white;
-        text-shadow: 1px 1px 6px rgb(0, 0, 0);
-        display: flex;
-        flex-direction: column; /* Ensure elements stack vertically */
-        align-items: flex-start; /* Align items to the left */
-
-        h1 {
-            font-size: 5.5vw;
-            font-weight: 100;
-            letter-spacing: .6vw;
-        }
-
-        h2 {
-            font-size: 3vw; 
-            font-weight: 100;
-            letter-spacing: .4vw;
-            white-space: normal;  
-            overflow: visible;   
-            margin-top: 3vw;
-            align-items: flex-start; 
-        }
-
-        p {
-            width: 60%;
-            font-size: 1.8vw;
-            letter-spacing: .1vw;
-            line-height: 3vw;
-            text-align: left;
-        }
+    h2 {
+      font-size: 3vw;
+      font-weight: 100;
+      letter-spacing: 0.4vw;
+      white-space: normal;
+      overflow: visible;
+      margin-top: 3vw;
+      align-items: flex-start;
     }
 
-    .interactive-button {
-       display: block; /* Ensure h2 is displayed as text on mobile */
-        border: none;   /* Remove the border */
-        background-color: transparent; /* Remove the background */
-        cursor: default; /* Make it non-clickable */
-        text-decoration: none;
-        margin-top: 1vw; /* Add some space between h1 and h2 */
-        font-size: 4.2vw; /* Adjust font size as needed */
-        text-align: left;
-        letter-spacing: 0.4vw; /* Adjust letter spacing */
+    p {
+      width: 60%;
+      font-size: 1.8vw;
+      letter-spacing: 0.1vw;
+      line-height: 3vw;
+      text-align: left;
     }
+  }
+
+  .interactive-button {
+    display: block; /* Ensure h2 is displayed as text on mobile */
+    border: none; /* Remove the border */
+    background-color: transparent; /* Remove the background */
+    cursor: default; /* Make it non-clickable */
+    text-decoration: none;
+    margin-top: 1vw; /* Add some space between h1 and h2 */
+    font-size: 4.2vw; /* Adjust font size as needed */
+    text-align: left;
+    letter-spacing: 0.4vw; /* Adjust letter spacing */
+  }
 }
 
 @media (max-width: 425px) {
-    .header {
-        background-image: url("../../../assets/home/2.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 160vw;
+  .header {
+    background-image: url("../../../assets/home/2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 160vw;
+  }
+
+  .text {
+    width: 90%;
+    margin: auto;
+    color: white;
+    text-shadow: 1px 1px 6px rgb(0, 0, 0);
+    margin-left: 5vw;
+    h1 {
+      font-size: 8vw;
+      font-weight: 100;
+      letter-spacing: 0.5vw;
     }
 
-    .text {
-        width: 90%;
-        margin: auto;
-        color: white;
-        text-shadow: 1px 1px 6px rgb(0, 0, 0);
-        margin-left: 5vw;  
-
-        h1 {
-            font-size: 8vw;
-            font-weight: 100;
-            letter-spacing: .5vw;
-        }
-
-        h2 {
-            font-size: 5.2vw;  
-            font-weight: 100;
-            letter-spacing: .2vw;
-            white-space: normal;  
-            overflow: visible;    
-        }
-
-        p {
-            width: 60%;
-            font-size: 3vw;
-            font-weight: 100;
-            letter-spacing: .3vw;
-            line-height: 5vw;
-        }
+    h2 {
+      font-size: 5.2vw;
+      font-weight: 100;
+      letter-spacing: 0.2vw;
+      white-space: normal;
+      overflow: visible;
     }
 
-    .interactive-button {
-        font-size: 5vw; 
-        max-width: 80%;   
+    p {
+      width: 60%;
+      font-size: 3vw;
+      font-weight: 100;
+      letter-spacing: 0.3vw;
+      line-height: 5vw;
     }
+  }
+
+  .interactive-button {
+    font-size: 1.5vw;
+    max-width: 80%;
+    letter-spacing: 0.4px;
+  }
 }
