@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Restaurant_main.css';
 import Ambience from '../Ambience/Ambience';
 import Food from '../Food/Food';
@@ -9,31 +9,21 @@ const starIcon = process.env.PUBLIC_URL + '/Star.svg';
 
 const RestaurantMain = (props) => {
   const navigate = useNavigate();
-  const [showPopup, setShowPopup] = useState(false);
 
   const handleClick = (section) => {
+    // Use navigate for scrolling
     navigate(`#${section}`);
   };
 
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
-
-  const closePopup = (e) => {
-    if (e.target.className === 'popup') {
-      setShowPopup(false);
-    }
-  };
-
   return (
-    <div className="restaurant_main">
+    <div className='restaurant_main'>
       <div className="inner">
         {/* Title Section */}
         <div className="text_img">
-          <div className="img">
+          <div className='img'>
             <img src={props.image || '/default-image.jpg'} alt="Restaurant" />
           </div>
-          <div className="text_restro">{props.name}</div>
+          <div className='text_restro'>{props.name}</div>
           <div className="restro-rating">
             <span>{props.rating}</span>
             <img src={starIcon} alt="Star" className="icon" />
@@ -44,12 +34,12 @@ const RestaurantMain = (props) => {
         {/* Restaurant Info Section */}
         <div className="restaurant-info">
           <div className="left">
-            <div className="first">
+            <div className='first'>
               <p className="cuisine">{props.cuisine}</p>
               <p className="address">{props.address}</p>
               <p className="timing">{props.timming}</p>
             </div>
-            <div className="second">
+            <div className='second'>
               <p className="price1">{props.price}</p>
               <p className="phone">{props.number}</p>
             </div>
@@ -59,7 +49,7 @@ const RestaurantMain = (props) => {
               <button onClick={() => handleClick("food")}>Food</button>
               <button onClick={() => handleClick("ambience")}>Ambience</button>
               <button onClick={() => handleClick("menu")}>Menu</button>
-              <button className="call" onClick={togglePopup}>Call us</button>
+              <button className='call'>Call us</button>
             </div>
             <div className="recommendations">
               <h4>Get Recommendations</h4>
@@ -69,35 +59,20 @@ const RestaurantMain = (props) => {
             </div>
           </div>
         </div>
-
+        
         {/* Section Content */}
         <div id="AMB">
           <Ambience arr={props.amb_arr} />
         </div>
-        <div id="FOOD">
+        <div id='FOOD'>
           <Food arr={props.food_arr} />
         </div>
         <br />
         <br />
         <div id="MENU">
-          <Menu source={props.source} />
+          <Menu source = {props.source}/>
         </div>
       </div>
-
-      {/* Popup Section */}
-      {showPopup && (
-        <div className="popup" onClick={closePopup}>
-          <div className="popup-content">
-            <p className="popup-phone">{props.number}</p>
-            <button
-              className="popup-call"
-              onClick={() => (window.location.href = `tel:${props.number}`)}
-            >
-              Call Now
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

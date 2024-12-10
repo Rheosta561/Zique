@@ -1,69 +1,69 @@
 .restaurant_main {
-  display: flex;
-  flex-direction: column;
-  margin: 0 10vw;
+    display: flex;
+    flex-direction: column;
+    margin:0 10vw;
 }
 
-.inner {
-  /* background-color: aqua; */
-  display: flex;
-  height: auto;
-  flex-direction: column;
-  margin: 7vw 0;
+.inner{
+    /* background-color: aqua; */
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin:7vw 0;
 }
 
-.inner > .text_img {
-  /* background-color: antiquewhite ; */
-  padding: 1vw 0;
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  align-items: center;
-  gap: 1vw;
-  justify-content: left;
+.inner>.text_img{
+    /* background-color: antiquewhite ; */
+    padding: 1vw 0;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+    gap: 1vw;
+    justify-content: left;
 }
-.text_img > .text_restro {
-  color: black;
-  font-size: 5vw;
+.text_img>.text_restro{
+    color: black;
+    font-size: 5vw;
 }
-.text_img > .img {
-  height: 5vw;
-  width: 5vw;
-  border-radius: 5vw;
-  border: 1px solid black;
+.text_img>.img{
+    height: 5vw;
+    width: 5vw;
+    border-radius: 5vw;
+    border: 1px solid black;
 }
 .restro-rating {
-  display: flex;
-  align-items: center;
-  font-size: 2vw;
-  color: white;
-  background-color: rgba(58, 192, 46, 1);
-  padding: 0.4vw;
-  border-radius: 0.5vw;
-  margin-left: auto;
-  align-self: last baseline;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    color: white;
+    background-color: rgba(58, 192, 46, 1);
+    padding: .4vw;
+    border-radius: .5vw;
+    margin-left: auto;
+    align-self: last baseline;  
 }
 .restro-rating .icon {
-  margin-left: 1vw; /* Space between rating and star */
-  height: 1.5vw; /* Adjust size of the star icon */
-  width: 1.5vw;
+    margin-left: 1vw; /* Space between rating and star */
+    height: 1.5vw; /* Adjust size of the star icon */
+    width: 1.5vw;
 }
 .line {
-  width: 100%;
-  height: 0.1vw;
-  background-color: gray;
-  border-radius: 1vw;
+    width: 100%;
+    height: .1vw;
+    background-color: gray;
+    border-radius: 1vw;
 }
 
 .restaurant-info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1vw;
-  height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    height: auto;
 }
 
 .restaurant-info .left {
-  width: 40%;
+    width: 40%;
 }
 
 .restaurant-info .left .cuisine,
@@ -71,252 +71,164 @@
 .restaurant-info .left .timing,
 .restaurant-info .left .price1,
 .restaurant-info .left .phone {
-  margin: 0.5vw 0;
-  font-size: 1.2vw;
+    margin: 0.5vw 0;
+    font-size: 1.2vw;
 }
 
 .restaurant-info .right {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  height: auto;
+    width: 45%;
+    display: flex;
+        flex-direction: column;
+        height: auto;
 }
 
 .restaurant-info .right .buttons {
-  display: flex;
-  padding: 1vw 0;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1vw;
+    display: flex;
+    padding: 1vw 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vw;
 }
-.restaurant-info .right .buttons .call {
-  display: none;
+.restaurant-info .right .buttons .call{
+    display: none;
 }
 
 .restaurant-info .right .buttons button {
-  padding: 0.5vw;
-  box-shadow: none;
-  font-size: 1.5vw;
-  width: 30%;
-  /* background-color: #B71048; */
-  background-color: black;
-  color: #fff;
-  border-radius: 1.2vw;
-  cursor: pointer;
-  border: none;
+    padding: 0.5vw;
+    box-shadow: none;
+    font-size: 1.5vw;
+    width: 30%;
+    /* background-color: #B71048; */
+    background-color: black;
+    color: #fff;
+    border-radius: 1.2vw;
+    cursor: pointer;
+    border: none;
 }
 
 .restaurant-info .right .recommendations {
-  background-color: #ffffff;
-  padding: 1vw;
-  border-radius: 1vw;
-  border: 0.1vw solid black;
-  padding: 2vw;
+    background-color: #ffffff;
+    padding: 1vw;
+    border-radius: 1vw;
+    border: .1vw solid black;
+    padding: 2vw;
 }
 
 .restaurant-info .right .recommendations h4 {
-  font-size: 1.5vw;
-  margin-top: 0vw;
+    font-size: 1.5vw;
+    margin-top: 0vw;
 }
 
 .restaurant-info .right .recommendations p {
-  font-size: 1.2vw;
-  color: gray;
+    font-size: 1.2vw;
+    color: gray;
 }
 
 /* Responsive for tablets and below */
 @media (max-width: 768px) {
-  .restaurant_main {
-    margin: 0 10vw;
-  }
-  .inner {
-    margin: 20vw 0;
-  }
-  .restaurant-info {
-    flex-direction: column;
-  }
-  .restaurant-info .left {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .restaurant-info .left .second .phone {
-    display: none;
-  }
-  .restaurant-info .left .first {
-  }
-  .restaurant-info .left .second {
-  }
-  .restaurant-info .right {
-    width: 100%;
-    margin-top: 2vw;
-    gap: 2vw;
-    justify-content: center;
-  }
+    .restaurant_main{
+        margin:0 10vw;
+    }
+    .inner{
+        margin:20vw 0;
+    }
+    .restaurant-info {
+        flex-direction: column;
+    }
+    .restaurant-info .left{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .restaurant-info .left .second .phone{
+        display: none;
+    }
+    .restaurant-info .left .first{
+    }
+    .restaurant-info .left .second{
+        }
+    .restaurant-info .right {
+        width: 100%;
+        margin-top: 2vw;
+        gap: 2vw;
+        justify-content: center;
+    }
 
-  .restaurant-info .right .buttons {
-    justify-content: left;
-    gap: 1vw;
-  }
-  .restaurant-info .right .buttons .call {
-    display: block;
-    border: 0.2vw solid black;
-    color: black;
-    background-color: white;
-    margin-left: auto;
-  }
+    .restaurant-info .right .buttons {
+        justify-content: left;
+        gap: 1vw;
+    }
+    .restaurant-info .right .buttons .call{
+        display: block;
+        border:.2vw solid black;
+        color: black;
+        background-color: white;
+        margin-left: auto;
 
-  .restaurant-info .right .buttons button {
-    font-size: 2vw;
-    width: 19%;
-    border-radius: 1.8vw;
-    padding: 1vw;
-  }
+    }
 
-  .restaurant-info .right .recommendations {
-    border-radius: 3vw;
-    padding: 2vw 5vw;
-  }
+    .restaurant-info .right .buttons button {
+        font-size: 2vw;
+        width: 19%;
+        border-radius: 1.8vw;
+        padding: 1vw;
+    }
 
-  .restaurant-info .right .recommendations h4 {
-    font-size: 3vw;
-    margin: 2vw 0;
-  }
+    .restaurant-info .right .recommendations {
+        border-radius: 3vw;
+        padding: 2vw 5vw;
+    }
 
-  .restaurant-info .right .recommendations p {
-    font-size: 2vw;
-    width: 90%;
-  }
+    .restaurant-info .right .recommendations h4 {
+        font-size: 3vw;
+        margin: 2vw 0;
+    }
+
+    .restaurant-info .right .recommendations p {
+        font-size: 2vw;
+        width: 90%;
+    }
 }
 
 /* Responsive for mobile devices */
 @media (max-width: 425px) {
-  .restaurant_main {
-    margin: 0 5vw;
-  }
-  .inner {
-    margin: 20vw 0;
-  }
-  .restaurant-info .right {
-    width: 100%;
-    margin-top: 8vw;
-    gap: 4vw;
-    justify-content: center;
-  }
+    .restaurant_main {
+        margin: 0 5vw;
+    }
+    .inner{
+        margin:20vw 0;
+    }
+    .restaurant-info .right {
+        width: 100%;
+        margin-top: 8vw;
+        gap: 4vw;
+        justify-content: center;
+    }
 
-  .restaurant-info .right .buttons {
-    justify-content: left;
-    gap: 1vw;
-  }
+    .restaurant-info .right .buttons {
+        justify-content: left;
+        gap: 1vw;
+    }
 
-  .restaurant-info .right .buttons button {
-    font-size: 3vw;
-    width: 21%;
-    border-radius: 3.5vw;
-    padding: 2vw;
-  }
+    .restaurant-info .right .buttons button {
+        font-size: 3vw;
+        width: 21%;
+        border-radius: 3.5vw;
+        padding: 2vw;
+    }
 
-  .restaurant-info .right .recommendations {
-    border-radius: 3.5vw;
-    padding: 2vw 3vw;
-  }
+    .restaurant-info .right .recommendations {
+        border-radius: 3.5vw;
+        padding: 2vw 3vw;
+    }
 
-  .restaurant-info .right .recommendations h4 {
-    font-size: 5vw;
-    margin-bottom: 0;
-  }
+    .restaurant-info .right .recommendations h4 {
+        font-size: 5vw;
+        margin-bottom: 0;
+    }
 
-  .restaurant-info .right .recommendations p {
-    font-size: 3.5vw;
-  }
-}
+    .restaurant-info .right .recommendations p {
+        font-size: 3.5vw;
+    }
 
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.popup-content {
-  background-color: white;
-  padding: 2vw;
-  border-radius: 1vw 1vw 0 0;
-  text-align: center;
-  box-shadow: 0 -0.5vw 1vw rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-width: 400px;
-  position: relative;
-  animation: slideUp 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  to {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-.popup-phone {
-  font-size: 4vw;
-  font-weight: bold;
-  margin-bottom: 2vw;
-}
-
-.popup-call {
-  display: block;
-  width: 100%;
-  padding: 1vw;
-  background-color: #b70f47;
-  color: white;
-  font-size: 3vw;
-  border: none;
-  border-radius: 0.5vw;
-  cursor: pointer;
-  margin-bottom: 1vw;
-}
-
-@media (max-width: 768px) {
-  .popup-content {
-    padding: 4vw;
-    border-radius: 2vw;
-  }
-
-  .popup-phone {
-    font-size: 5vw;
-  }
-
-  .popup-call {
-    font-size: 4vw;
-    border-radius: 1.5vw;
-  }
-}
-
-@media (max-width: 425px) {
-  .popup-phone {
-    font-size: 6vw;
-  }
-
-  .popup-call {
-    font-size: 5vw;
-    padding: 3vw;
-  }
 }
