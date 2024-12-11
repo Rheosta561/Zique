@@ -9,6 +9,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/a11y';
 import sampleimg from '../../../../assets/Explore/Header/RC.jpeg';
+import img1 from "./restaurants/1.png"
+import img2 from "./restaurants/2.png"
+import img3 from "./restaurants/3.png"
+import img4 from "./restaurants/4.png"
+import img5 from "./restaurants/5.png"
 import useWindowSize from '../../../../components/useWindowSize';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -25,51 +30,51 @@ const Mumbai_collection = () => {
 
   const cardData = [
     {
-      title: 'Gigi1, Bandra',
-      rating: '4.4',
+      title: 'Gigi',
+      rating: '4.2',
       location: 'Linking Road, Bandra West, Mumbai',
       cuisines: 'Japanese | European',
-      price: '₹4000 for two',
-      image: sampleimg,
+      price: '₹3000 for two',
+      image: img1,
       fun: handleClickGigi,
     },
 
     {
-      title: 'Gigi2, Bandra',
-      rating: '4.4',
-      location: 'Linking Road, Bandra West, Mumbai',
-      cuisines: 'Japanese | European',
-      price: '₹4000 for two',
-      image: sampleimg,
+      title: 'Lyla',
+      rating: '4.0',
+      location: 'Bandra Kurla Complex, Mumbai',
+      cuisines: 'Mexian & Californian',
+      price: '₹2500 for two',
+      image: img2,
       fun: handleClickGigi,
     },
 
     {
-      title: 'Gigi3, Bandra',
+      title: 'Eve',
       rating: '4.4',
-      location: 'Linking Road, Bandra West, Mumbai',
-      cuisines: 'Japanese | European',
-      price: '₹4000 for two',
-      image: sampleimg,
+      location: 'Worli, Mumbai',
+      cuisines: 'Asian, Continental & North Indian',
+      price: '₹3000 for two',
+      image: img3,
       fun: handleClickGigi,
     },
 
     {
-      title: 'Gigi4, Bandra',
+      title: 'Shy',
       rating: '4.4',
-      location: 'Linking Road, Bandra West, Mumbai',
-      cuisines: 'Japanese | European',
-      price: '₹4000 for two',
-      image: sampleimg,
+      location: 'Chembur, Mumbai',
+      cuisines: 'Asian, Continental & North Indian',
+      price: '₹1,800 for two',
+      image: img4,
       fun: handleClickGigi,
     },
     {
-      title: 'Gigi5, Bandra',
-      rating: '4.4',
-      location: 'Linking Road, Bandra West, Mumbai',
-      cuisines: 'Japanese | European',
-      price: '₹4000 for two',
-      image: sampleimg,
+      title: 'Donna Deli',
+      rating: '4.3',
+      location: 'Bandra West, Mumbai',
+      cuisines: 'Asian & Italian',
+      price: '₹1,800 for two',
+      image: img5,
       fun: handleClickGigi,
     },
   ];

@@ -3,6 +3,11 @@
     flex-direction: column;
     margin:0 10vw;
 }
+.profilepic{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
 
 .inner{
     /* background-color: aqua; */
@@ -63,16 +68,21 @@
 }
 
 .restaurant-info .left {
-    width: 40%;
+    width: 50%;
 }
 
-.restaurant-info .left .cuisine,
-.restaurant-info .left .address,
+
 .restaurant-info .left .timing,
 .restaurant-info .left .price1,
-.restaurant-info .left .phone {
-    margin: 0.5vw 0;
-    font-size: 1.2vw;
+.restaurant-info .left .phone { 
+    margin: 2vw 0;
+    font-size: 1.8vw;
+}
+.cuisine , .address{
+    font-size: 2.05vw !important;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.706);
+    margin: 1vw 0 !important;
 }
 
 .restaurant-info .right {
@@ -143,9 +153,11 @@
     .restaurant-info .left .second .phone{
         display: none;
     }
-    .restaurant-info .left .first{
+    .restaurant-info .left .first p{
+        font-size: 0.8rem;
     }
-    .restaurant-info .left .second{
+    .restaurant-info .left .second p{
+        font-size: 0.8rem;
         }
     .restaurant-info .right {
         width: 100%;
@@ -188,6 +200,9 @@
         font-size: 2vw;
         width: 90%;
     }
+    .restro-rating{
+        padding: 0.5rem;
+    }
 }
 
 /* Responsive for mobile devices */
@@ -195,9 +210,26 @@
     .restaurant_main {
         margin: 0 5vw;
     }
+    .text_restro{
+        font-size: 1.5rem !important;
+    }
+    .text_img{
+    }
     .inner{
         margin:20vw 0;
     }
+    
+   .cuisine{
+    font-size: 1rem !important;
+    margin-bottom: 1.5vh !important;
+   }
+   .address{
+    font-size: 0.8rem !important;
+    margin-bottom: 0.8vh !important;
+   }
+   .timing{
+    font-size: 0.6rem !important;
+   }
     .restaurant-info .right {
         width: 100%;
         margin-top: 8vw;
@@ -230,5 +262,85 @@
     .restaurant-info .right .recommendations p {
         font-size: 3.5vw;
     }
+    .restro-rating{
+        padding: 0.2rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5vh;
+    }
 
 }
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1000;
+  }
+  
+  .phone-popup {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px 10px 0 0;
+    animation: slideInFromBottom 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5vw;
+  }
+  
+  .popup-number-section {
+    background-color: rgb(255, 255, 255);
+    padding: 2vw;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 90%;
+    text-align: center;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4vw;
+    padding-bottom: 2vw;
+    margin: auto;
+  }
+  
+  .popup-number {
+    font-size: 20px;
+    letter-spacing: 0.5vw;
+    font-weight: bold;
+    color: black;
+    margin-top: 2vw;
+    
+  }
+  
+  .popup-button-section {
+    text-align: center;
+    padding: 10px 20px;
+    width: 90%;
+  }
+  
+  .popup-call {
+    background-color: #b71048;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 16px;
+    width: 85vw;
+    margin-left: -2.5vw;
+    cursor: pointer;
+  }
+  
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }

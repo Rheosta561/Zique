@@ -40,3 +40,8 @@
     border: .1vw solid gray;
     margin-bottom: 5vw;
 }
+@media (max-width: 425px){
+    .food_text{
+        font-size: 2rem !important;
+    }
+}

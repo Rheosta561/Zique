@@ -6,11 +6,11 @@ const Ambience = (props) => {
     <div className='ambience' id='AMB'>
         <div className='ambience_header'>
             <div className='amb_text'>Ambience</div>
-            <div className='amb-buttons'>
+            {/* <div className='amb-buttons'>
                 <button>Food</button>
                 <button>Ambience</button>
                 <button>Menu</button>
-            </div>
+            </div> */}
         </div>
         <hr className='amb-line'/>
         <PhotoGrid arr={props.arr}/>

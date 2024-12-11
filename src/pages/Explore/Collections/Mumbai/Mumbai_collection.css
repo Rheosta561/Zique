@@ -90,10 +90,10 @@
 /* Mobile Styles */
 @media (max-width: 425px) {
   .headtext {
-      font-size: 5vw;
+      font-size: 3.8vw;
       font-weight: 200;
       letter-spacing: 0vw;
-      margin: 2vw 0 8vw 0;
+      margin: 1vw 0 8vw 0;
   }
   .carasouel{
     /* background-color: red; */
@@ -102,9 +102,11 @@
     margin: 16vw 5vw;
   }
   .head-city{
-    font-size: 9vw;
+    font-size: 8vw;
     font-weight: 500;
     letter-spacing: 0.1vw;
+    letter-spacing: -0.9px;
+    color: rgba(0, 0, 0, 0.884);
 
   }
 

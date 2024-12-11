@@ -6,7 +6,7 @@ const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [typedText, setTypedText] = useState(" ");  // Track the typed text
     const fullText =
-        "Zique offers personalized food recommendations based on your unique tastes, making dining out easier and more enjoyable. Discover new meals or enjoy your favorites with tailored suggestions.";
+        "ZZique offers personalized food recommendations based on your unique tastes, making dining out easier and more enjoyable. Discover new meals or enjoy your favorites with tailored suggestions ";
 
     useEffect(() => {
         // Detect screen size and set mobile state
@@ -73,7 +73,7 @@ const Header = () => {
                     className={`interactive-button ${isMobile ? 'no-button' : ''}`}
                     onClick={() => !isMobile && setShowText(!showText)} 
                 >
-                    FIND YOUR PERFECT DISH EVERYTIME
+                    FIND YOUR PERFECT DISH EVERYTIME .
                 </h2>
                 <p className={`description ${isMobile || showText ? 'visible' : ''}`}>
                     {typedText} 

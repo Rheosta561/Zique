@@ -2,14 +2,14 @@
 .mainframe {
     display: grid;
     grid-template-columns: repeat(4, 18.5vw);
-    grid-template-rows: repeat(4, 20vw);
+    grid-template-rows: repeat(3, 20vw);
     gap: 1vw;
     justify-content: center;
     grid-template-areas:
         "i1 i2 i3 i4"
         "i5 i6 i7 i8"
         "i9 i10 i11 i12"
-        "i13 i14 i15 i16";
+        ;
 }
 
 .item {
@@ -23,8 +23,15 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .mainframe {
-        grid-template-rows: repeat(4, 21vw);
+        grid-template-rows: repeat(4, 30vw);
+        grid-template-columns: repeat(3, 26vw);
         gap: 2vw;
+        grid-template-areas:
+            "i1 i2 i3"
+            "i4 i5 i6"
+            "i7 i8 i9"  
+            "i10 i11 i12"  
+            ;
     }
     .item {
         border-radius: 2vw;
@@ -33,24 +40,15 @@
 
 @media (max-width: 425px) {
     .mainframe {
-        grid-template-columns: repeat(5, 16vw);
-        grid-template-rows: repeat(14, 18vw);
+        grid-template-columns: repeat(3, 30vw);
+        grid-template-rows: repeat(4, 28vw);
         gap: 1vw;
         grid-template-areas:
-            "i1 i1 i1 i2 i2"
-            "i1 i1 i1 i2 i2"
-            "i3 i3 i4 i4 i4"  
-            "i3 i3 i4 i4 i4"  
-            "i5 i5 i5 i6 i6"
-            "i5 i5 i5 i6 i6"
-            "i7 i7 i8 i8 i8"
-            "i7 i7 i8 i8 i8"
-            "i9 i9 i9 i10 i10"
-            "i9 i9 i9 i10 i10"
-            "i11 i11 i12 i12 i12"
-            "i11 i11 i12 i12 i12"
-            "i13 i13 i13 i14 i14"
-            "i13 i13 i13 i14 i14";
+            "i1 i2 i3"
+            "i4 i5 i6"
+            "i7 i8 i9"  
+            "i10 i11 i12"  
+            ;
     }
     .item {
         border-radius: 2.5vw;

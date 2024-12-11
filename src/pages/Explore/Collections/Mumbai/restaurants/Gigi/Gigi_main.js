@@ -3,6 +3,7 @@ import sampleimg from '../../../../../../assets/Explore/Header/RC.jpeg';
 import './Gigi_main.css';
 import RestaurantMain from '../../../../../../components/RestaurantMain/RestaurantMain';
 import { useParams } from 'react-router-dom';
+import Loading from '../../../../../../components/Loading/Loading'; // Import the Loading component
 
 const arr = [
     sampleimg,
@@ -49,7 +50,7 @@ const Gigi_main = () => {
     }, [restaurant]);
 
     if (isLoading) {
-        return <div>Loading...</div>;
+        return <Loading />; // Show the loading spinner
     }
     if (!restaurantData) {
         return <div>Restaurant not found</div>;
@@ -68,6 +69,10 @@ const Gigi_main = () => {
                 amb_arr={restaurantData.ambience.length > 0 ? restaurantData.ambience : arr}  // Fallback if ambience array is empty
                 food_arr={restaurantData.food.length > 0 ? restaurantData.food : arr}  // Fallback if food array is empty
                 source={restaurantData.menu}
+                image={restaurantData.profileImage}
+                timing={restaurantData.timings}
+                chatbot={restaurantData.chatbot}
+                location={restaurantData.location}
             />
         </div>
     );

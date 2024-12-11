@@ -3,12 +3,21 @@
     margin:auto;
     display: flex;
     flex-direction: column;
+    padding-top: 1vh;
     justify-content: center;
     iframe{
-        width: 80%;
+        width: 100%;
         margin: 5vh auto;
         height: 92vh;
+        border : 1px solid rgba(79, 79, 79, 0.177);
+        background-color: rgba(202, 202, 223, 0.142);
+        border-radius: 0.8rem;
+
+        
     }
+}
+.framebot{
+    border-radius: 1rem;
 }
 .Ambience,.Food{
     display: flex;
@@ -25,6 +34,7 @@
 @media(max-width:768px){
     .frame{
         width: 90%;
+        padding-top: 3vh;
         iframe{
             width: 90%;
             margin: 5vh auto;

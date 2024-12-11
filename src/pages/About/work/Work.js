@@ -4,7 +4,7 @@ const Work = () => {
   return (
     <div className='work'>
       <div className='img'></div>
-      <div className='text'>
+      <div className='wtext'>
         <h1 className='head'>How We Work:</h1>
         <h1 className='zm'>Zique Menu (Coming Soon..)</h1>
         <h2 className='item1'>Craft Your Palate Profile</h2>

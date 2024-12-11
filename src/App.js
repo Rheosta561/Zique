@@ -10,6 +10,7 @@ import Mumbai_collection from './pages/Explore/Collections/Mumbai/Mumbai_collect
 import Gigi_main from './pages/Explore/Collections/Mumbai/restaurants/Gigi/Gigi_main';
 import Lyla_main from './pages/Explore/Collections/Mumbai/restaurants/Lyla/Lyla_main';
 import Shy_main from './pages/Explore/Collections/Mumbai/restaurants/Shy/Shy_main';
+import BotPage from './pages/Home/bot/BotPage';
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
           <Route path="/explore/:city/:restaurant" element={<Lyla_main/>} />
           <Route path="/explore/:city/:restaurant" element={<Shy_main/>} />
           <Route path="/explore/:city" element={<Mumbai_collection/>}/>
+          <Route path="/explore/:city/:restaurant/zico/:name" element={<Iframe />} />
         </Routes>
       </div>
     </BrowserRouter>

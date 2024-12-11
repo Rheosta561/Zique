@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Menu.css"
 
 function Menu(props) {
   const pdfUrl = props.source;
@@ -16,23 +17,23 @@ const handleMenClick =() =>{
     <div className='food' id="MENU">
     <div className='food_header'>
         <div className='food_text'>Menu</div>
-        <div className='food-buttons'>
+        {/* <div className='food-buttons'>
             <button onClick={handleFoodClick}>Food</button>
             <button onClick={handleAmbClick}>Ambience</button>
             <button onClick={handleMenClick}>Menu</button>
-        </div>
+        </div> */}
     </div>
     <hr className='food-line'/>
-    <div className="border border-zinc-400 h-fit w-full mt-4 p-4 rounded-lg">
+    <div className="border border-zinc-400 h-fit w-full mt-4 p-4 rounded-lg menu">
         {/* PDF Viewer */}
-        <div className="w-full h-[600px] border-zinc-300 border rounded-lg overflow-hidden">
+        <div className="w-full h-[600px] border-zinc-300 border rounded-lg overflow-hidden m-content">
           <iframe
             src={pdfUrl}
             title="PDF Viewer"
             width="100%"
             height="100%"
             frameBorder="0"
-            className="rounded-lg"
+            className="rounded-lg m-frame"
             style={{ overflow: 'hidden' }}
 
 

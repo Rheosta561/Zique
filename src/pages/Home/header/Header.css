@@ -1,4 +1,5 @@
 /* Header Styling */
+
 .Mheader {
   position: relative;
   z-index: 1;
@@ -57,7 +58,7 @@ h1 {
 .W3::before {
   position: absolute;
   content: "";
-  width: 0;
+  width: 100;
   left: 0;
   height: 2px;
   bottom: -5px;
@@ -128,7 +129,7 @@ h1 {
   /* padding: 0.5vw 1vw; */
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 2px solid white;
+
   border-radius: 0.5vw;
   transition: transform 0.3s ease, background-color 0.3s ease;
   text-align: center;
@@ -209,26 +210,26 @@ h1 {
     cursor: default; /* Make it non-clickable */
     text-decoration: none;
     margin-top: 1vw; /* Add some space between h1 and h2 */
-    font-size: 4.2vw; /* Adjust font size as needed */
+    font-size: 1.4vw; /* Adjust font size as needed */
     text-align: left;
     letter-spacing: 0.4vw; /* Adjust letter spacing */
   }
 }
 
 @media (max-width: 425px) {
-  .header {
+  .Mheader {
     background-image: url("../../../assets/home/2.jpg");
     background-size: cover;
     background-position: center;
-    height: 160vw;
+    height: 180vw;
   }
 
-  .text {
+  .htext {
     width: 90%;
     margin: auto;
-    color: white;
     text-shadow: 1px 1px 6px rgb(0, 0, 0);
     margin-left: 5vw;
+    margin-bottom: 100vw;
     h1 {
       font-size: 8vw;
       font-weight: 100;
@@ -254,7 +255,9 @@ h1 {
 
   .interactive-button {
     font-size: 1.5vw;
-    max-width: 80%;
+    width: 50vw;
+    /* max-width: 80%; */
     letter-spacing: 0.4px;
+    margin-top: 7vw;
   }
 }
