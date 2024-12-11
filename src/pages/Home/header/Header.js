@@ -6,7 +6,7 @@ const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [typedText, setTypedText] = useState(" ");  // Track the typed text
     const fullText =
-        "ZZique offers personalized food recommendations based on your unique tastes, making dining out easier and more enjoyable. Discover new meals or enjoy your favorites with tailored suggestions ";
+        "Zique offers personalized food recommendations based on your unique tastes, making dining out easier and more enjoyable. Discover new meals or enjoy your favorites with tailored suggestions ";
 
     useEffect(() => {
         // Detect screen size and set mobile state
