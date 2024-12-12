@@ -30,6 +30,7 @@
 .text_img>.text_restro{
     color: black;
     font-size: 5vw;
+    font-weight: 600;
 }
 .text_img>.img{
     height: 5vw;
